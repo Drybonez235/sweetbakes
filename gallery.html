@@ -1,0 +1,1118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>sweetbakeschicago.com</title>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+  <!-- Your built Tailwind file -->
+  <link href="/src/style.css" rel="stylesheet" />
+</head>
+
+<body class="antialiased text-gray-800 bg-white">
+
+ <!-- NAV + HERO COMBINED -->
+<header class="bg-white shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Logo (centered) -->
+    <div class="flex justify-center py-6">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="/public/sweet_bakes_logo.png" alt="Sweet Bakes Chicago"
+          class="h-96 w-auto object-contain" />
+      </a>
+    </div>
+
+    <!-- Centered navigation (desktop) -->
+    <nav class="hidden md:flex justify-center border-t pt-4 pb-4" aria-label="Main">
+      <ul class="flex gap-10 text-gray-700 items-center">
+        <li>
+          <a href="index.html"
+            class="px-2 py-1 rounded transition-colors duration-150
+                   text-gray-700 hover:bg-gray-100 hover:text-gray-900
+                   focus:bg-gray-100 focus:text-gray-900">Home</a>
+        </li>
+
+        <li>
+          <a href="about-us.html"
+            class="px-2 py-1 rounded transition-colors duration-150
+                   text-gray-700 hover:bg-gray-100 hover:text-gray-900
+                   focus:bg-gray-100 focus:text-gray-900">About Us</a>
+        </li>
+
+        <li>
+          <a href="gallery.html"
+            class="px-2 py-1 rounded transition-colors duration-150
+                   text-gray-700 hover:bg-gray-100 hover:text-gray-900
+                   focus:bg-gray-100 focus:text-gray-900">Gallery</a>
+        </li>
+
+        <!-- Products dropdown (outer group) -->
+        <li class="relative group/products">
+          <a href="cakes.html"
+            class="flex items-center gap-2 px-2 py-1 rounded transition-colors duration-150
+                   text-gray-700 hover:bg-gray-100 hover:text-gray-900
+                   focus:bg-gray-100 focus:text-gray-900"
+            aria-haspopup="true" aria-expanded="false">
+            Products
+            <svg class="w-4 h-4 text-current" viewBox="0 0 20 20"
+              fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06-.02L10 10.67l3.71-3.48a.75.75 0 111.04 1.08l-4.25 4a.75.75 0 01-1.06 0l-4.25-4a.75.75 0 01-.02-1.06z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+
+          <!-- Main dropdown: anchored to bottom of trigger (top-full) no gap -->
+          <div
+            class="invisible opacity-0 pointer-events-none
+                   group-hover/products:visible group-hover/products:opacity-100 group-hover/products:pointer-events-auto
+                   group-focus-within/products:visible group-focus-within/products:opacity-100
+                   group-focus-within/products:pointer-events-auto
+                   transition-opacity duration-150 absolute left-1/2 top-full
+                   transform -translate-x-1/2 w-48 bg-white border rounded-md
+                   shadow-lg py-2 z-30"
+            role="menu" aria-label="Products">
+
+            <!-- Cakes (wrapper group so submenu stays open when pointer moves) -->
+            <div class="relative group/cakes">
+              <a href="cakes.html"
+                class="block px-4 py-2 text-sm text-gray-700 transition-colors
+           duration-150 hover:bg-gray-100 hover:text-gray-900
+           focus:bg-gray-100 focus:text-gray-900" role="menuitem">
+                Cakes
+              </a>
+
+              <!-- Cakes submenu (appears to the right) -->
+              <div
+                class="invisible opacity-0 pointer-events-none
+           group-hover/cakes:visible group-hover/cakes:opacity-100
+           group-hover/cakes:pointer-events-auto
+           group-focus-within/cakes:visible group-focus-within/cakes:opacity-100
+                   group-focus-within/cakes:pointer-events-auto
+           transition-opacity duration-150 absolute left-full top-0
+           -ml-px w-44 bg-white border rounded-md shadow-md py-2 z-40"
+                role="menu" aria-label="Cakes">
+
+                <!-- submenu items -->
+                <a href="flavors.html"
+                  class="block px-4 py-2 text-sm text-gray-700 transition-colors
+                         duration-150 hover:bg-gray-100 hover:text-gray-900
+                         focus:bg-gray-100 focus:text-gray-900" role="menuitem">Flavors</a>
+                <a href="pricing.html"
+                  class="block px-4 py-2 text-sm text-gray-700 transition-colors
+                         duration-150 hover:bg-gray-100 hover:text-gray-900
+                         focus:bg-gray-100 focus:text-gray-900" role="menuitem">Pricing</a>
+
+              </div>
+            </div>
+
+            <!-- Cookies (wrapper group) -->
+            <div class="relative group/cookies">
+              <a href="traditional-cookies.html"
+                class="block px-4 py-2 text-sm text-gray-700 transition-colors
+           duration-150 hover:bg-gray-100 hover:text-gray-900
+           focus:bg-gray-100 focus:text-gray-900" role="menuitem">
+                Cookies
+              </a>
+
+              <!-- Cookies submenu (appears to the right) -->
+              <div
+                class="invisible opacity-0 pointer-events-none
+           group-hover/cookies:visible group-hover/cookies:opacity-100
+           group-hover/cookies:pointer-events-auto
+           group-focus-within/cookies:visible group-focus-within/cookies:opacity-100
+                   group-focus-within/cakes:pointer-events-auto
+           transition-opacity duration-150 absolute left-full top-0
+           -ml-px w-44 bg-white border rounded-md shadow-md py-2 z-40"
+                role="menu" aria-label="Cookies">
+                <a href="traditional-cookies.html"
+                  class="block px-4 py-2 text-sm text-gray-700 transition-colors
+             duration-150 hover:bg-gray-100 hover:text-gray-900
+             focus:bg-gray-100 focus:text-gray-900" role="menuitem">
+                  Traditional Cookies
+                </a>
+                <a href="decorated-cookies.html"
+                  class="block px-4 py-2 text-sm text-gray-700 transition-colors
+             duration-150 hover:bg-gray-100 hover:text-gray-900
+             focus:bg-gray-100 focus:text-gray-900" role="menuitem">
+                  Decorated Cookies
+                </a>
+                <a href="macarons.html"
+                  class="block px-4 py-2 text-sm text-gray-700 transition-colors
+             duration-150 hover:bg-gray-100 hover:text-gray-900
+             focus:bg-gray-100 focus:text-gray-900" role="menuitem">
+                  Macarons
+                </a>
+              </div>
+            </div>
+
+            <!-- Donuts -->
+            <a href="donuts.html"
+              class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-150
+                     hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100
+                     focus:text-gray-900" role="menuitem">Donuts</a>
+
+            <!-- Pies -->
+            <a href="pies.html"
+              class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-150
+                     hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100
+                     focus:text-gray-900" role="menuitem">Pies</a>
+          </div>
+        </li>
+
+        <li>
+          <a href="contact.html"
+            class="px-2 py-1 rounded transition-colors duration-150
+                   text-gray-700 hover:bg-gray-100 hover:text-gray-900
+                   focus:bg-gray-100 focus:text-gray-900">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile nav toggle -->
+<div class="md:hidden border-t">
+  <div class="px-4 py-3 flex items-center justify-between">
+    <div class="text-gray-700 font-medium">Menu</div>
+    <button id="mobileToggle" aria-controls="mobileMenu" aria-expanded="false"
+      class="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none
+                   focus:ring-2 focus:ring-rose-300">
+      <span class="sr-only">Open menu</span>
+      <svg id="iconOpen" class="w-6 h-6" fill="none" stroke="currentColor"
+        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+      <svg id="iconClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor"
+        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile stacked links -->
+  <nav id="mobileMenu" class="px-4 pb-4 hidden" aria-label="Mobile menu">
+    <a href="index.html" class="block px-2 py-2 rounded text-gray-700 hover:bg-gray-50">Home</a>
+    <a href="about-us.html" class="block px-2 py-2 rounded text-gray-700 hover:bg-gray-50">About Us</a>
+    <a href="gallery.html" class="block px-2 py-2 rounded text-gray-700 hover:bg-gray-50">Gallery</a>
+
+    <div class="mt-2 border-t pt-2">
+      <div class="text-sm text-gray-500 px-2 pb-1">Products</div>
+
+      <!-- List all product pages for mobile -->
+      <a href="cakes.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Cakes</a>
+      <a href="flavors.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Cake Flavors</a>
+      <a href="pricing.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Cake Pricing</a>
+
+      <a href="traditional-cookies.html"
+        class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Traditional
+        Cookies</a>
+      <a href="decorated-cookies.html"
+        class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Decorated
+        Cookies</a>
+      <a href="macarons.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Macarons</a>
+
+      <a href="donuts.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Donuts</a>
+      <a href="pies.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Pies</a>
+    </div>
+
+    <a href="contact.html" class="block mt-2 px-2 py-2 rounded text-gray-700 hover:bg-gray-50">Contact</a>
+  </nav>
+</div> 
+
+
+<body>
+  <main>
+    <section class="gallery-section mb-8">
+      <div class="carousel relative w-auto overflow-hidden rounded-lg shadow-lg">
+        <!-- Carousel items will be dynamically loaded here by JavaScript -->
+      </div>
+    </section>
+
+    <section class="photo-grid-section p-24">
+      <h2 class="text-2xl font-bold mb-4 text-center">Our Creations</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="2nd_birthday_cake.jpg"
+            alt="A two-tiered birthday cake decorated with colorful sprinkles and a '2' candle."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A two-tiered birthday cake decorated with colorful sprinkles and a
+              '2' candle.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="50th_aniverarsary_cake.png"
+            alt="An elegant multi-tiered cake for a 50th anniversary, possibly with gold accents."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              An elegant multi-tiered cake for a 50th anniversary, possibly
+              with gold accents.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="baby_box_cake.jpg"
+            alt="A novelty cake shaped like a gift box with baby-themed decorations."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A novelty cake shaped like a gift box with baby-themed
+              decorations.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="baby_prince_cake.png"
+            alt="A baby prince-themed cake, perhaps with a crown and blue or gold accents."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A baby prince-themed cake, perhaps with a crown and blue or gold
+              accents.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="black_and_white_cake.jpg"
+            alt="A sophisticated black and white themed cake, possibly with geometric patterns or floral designs."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A sophisticated black and white themed cake, possibly with
+              geometric patterns or floral designs.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="buz_lightyear_cake.png"
+            alt="A Buzz Lightyear themed cake, featuring the iconic space ranger from Toy Story."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A Buzz Lightyear themed cake, featuring the iconic space ranger
+              from Toy Story.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="chicago_city_wedding_cake.png"
+            alt="A wedding cake decorated with elements inspired by the Chicago city skyline."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A wedding cake decorated with elements inspired by the Chicago
+              city skyline.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="chucks_shoe_cake.jpg"
+            alt="A novelty cake expertly shaped and decorated to resemble a Chuck Taylor sneaker."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A novelty cake expertly shaped and decorated to resemble a Chuck
+              Taylor sneaker.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="cop_donut_cake.png"
+            alt="A fun cake designed with a police officer theme, possibly featuring donuts."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A fun cake designed with a police officer theme, possibly
+              featuring donuts.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="cute_elephant_baby_shower_cake.png"
+            alt="A charming baby shower cake adorned with cute elephant decorations."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A charming baby shower cake adorned with cute elephant
+              decorations.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="cute_elephent_baby_shower_cake.png"
+            alt="A delightful baby shower cake featuring adorable elephant designs."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A delightful baby shower cake featuring adorable elephant designs.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="dr_suis_cake.png"
+            alt="A whimsical cake inspired by Dr. Seuss, featuring bright colors and playful characters."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A whimsical cake inspired by Dr. Seuss, featuring bright colors
+              and playful characters.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="dragon_birthday_cake.jpg"
+            alt="An impressive birthday cake shaped like or decorated with a dragon, possibly in vibrant colors."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              An impressive birthday cake shaped like or decorated with a
+              dragon, possibly in vibrant colors.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="gold_40th_birthday_cake.jpg"
+            alt="A celebratory 40th birthday cake, elegantly decorated with gold accents."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A celebratory 40th birthday cake, elegantly decorated with gold
+              accents.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="Herry_potter_sorting_hat_cake.jpg"
+            alt="A Harry Potter themed cake featuring the iconic Sorting Hat, possibly with house colors."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A Harry Potter themed cake featuring the iconic Sorting Hat,
+              possibly with house colors.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="Herry_Potter_wizard_cake.jpg"
+            alt="A magical Harry Potter wizard themed cake, incorporating elements like wands or spell books."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A magical Harry Potter wizard themed cake, incorporating elements
+              like wands or spell books.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="iowa_hawk_eys_drum_cake.jpg"
+            alt="A highly detailed cake shaped like a drum, representing the Iowa Hawkeyes sports team."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A highly detailed cake shaped like a drum, representing the Iowa
+              Hawkeyes sports team.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="marching_band_cake.png"
+            alt="A cake celebrating a marching band, possibly featuring musical instruments or a band uniform."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A cake celebrating a marching band, possibly featuring musical
+              instruments or a band uniform.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="metra_cake.jpg"
+            alt="A novelty cake designed to resemble a Metra commuter train, likely for a train enthusiast."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A novelty cake designed to resemble a Metra commuter train,
+              likely for a train enthusiast.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="minion_cake.jpg"
+            alt="A fun cake featuring a Minion character from Despicable Me, with its distinctive yellow color and goggles."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A fun cake featuring a Minion character from Despicable Me, with
+              its distinctive yellow color and goggles.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="muppets_monster_cake.jpg"
+            alt="A cake featuring a monster character from The Muppets, likely Cookie Monster or Animal."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A cake featuring a monster character from The Muppets, likely
+              Cookie Monster or Animal.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="oh_dear_cake.jpg"
+            alt="A cute cake with a deer theme, possibly for a baby shower or nature lover."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A cute cake with a deer theme, possibly for a baby shower or
+              nature lover.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="painting_cake.png"
+            alt="An artistic cake designed to resemble a painting or an artist's palette, with colorful icing."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              An artistic cake designed to resemble a painting or an artist's
+              palette, with colorful icing.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="perfume_cake.jpg"
+            alt="A stylish cake shaped and decorated to look like a perfume bottle, possibly for a fashion enthusiast."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A stylish cake shaped and decorated to look like a perfume
+              bottle, possibly for a fashion enthusiast.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="pink_bow_cake.jpg"
+            alt="A charming cake adorned with a pink bow, suitable for a feminine celebration."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A charming cake adorned with a pink bow, suitable for a feminine
+              celebration.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="pop_corn_soda_cake.png"
+            alt="A fun cake featuring popular movie snacks like popcorn and soda."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A fun cake featuring popular movie snacks like popcorn and soda.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="pyrimad_cake.png"
+            alt="A unique cake shaped like a pyramid, possibly with ancient Egyptian-inspired details."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A unique cake shaped like a pyramid, possibly with ancient
+              Egyptian-inspired details.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="red_dress_cake.jpg"
+            alt="An elegant cake designed to resemble a flowing red dress, with intricate detailing."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              An elegant cake designed to resemble a flowing red dress, with
+              intricate detailing.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="red_tiered_draggon_cake.jpg"
+            alt="A majestic tiered cake featuring a red dragon, possibly with intricate scales and fiery details."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A majestic tiered cake featuring a red dragon, possibly with
+              intricate scales and fiery details.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="retiermrent_cake.jpg"
+            alt="A celebratory retirement cake, possibly decorated with themes of relaxation or hobbies."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A celebratory retirement cake, possibly decorated with themes of
+              relaxation or hobbies.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="retro_cake.jpg"
+            alt="A cake with a vibrant retro theme, featuring nostalgic colors and designs from past decades."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A cake with a vibrant retro theme, featuring nostalgic colors and
+              designs from past decades.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="rubics_cube_cake.jpg"
+            alt="A clever cake designed to look exactly like a colorful Rubik's Cube."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A clever cake designed to look exactly like a colorful Rubik's
+              Cube.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="sad_ice_cream_cake.jpg"
+            alt="A whimsical cake featuring a melting ice cream cone with a humorous 'sad' expression."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A whimsical cake featuring a melting ice cream cone with a
+              humorous 'sad' expression.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="soccer_cake.jpg"
+            alt="A sporty cake with a soccer theme, possibly shaped like a soccer ball or featuring field markings."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A sporty cake with a soccer theme, possibly shaped like a soccer
+              ball or featuring field markings.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="sponge_bob_cake.jpg"
+            alt="A cheerful SpongeBob SquarePants themed cake, featuring the beloved character and elements from Bikini Bottom."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A cheerful SpongeBob SquarePants themed cake, featuring the
+              beloved character and elements from Bikini Bottom.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="starwars_r2d2_cake.jpg"
+            alt="An impressive Star Wars cake designed to replicate the iconic droid R2D2."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              An impressive Star Wars cake designed to replicate the iconic
+              droid R2D2.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="steelers_football_cake.jpg"
+            alt="A cake celebrating the Pittsburgh Steelers football team, adorned with team colors and logos."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A cake celebrating the Pittsburgh Steelers football team, adorned
+              with team colors and logos.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="the_best_cake_sara_has_ever_made_says_lydia.png"
+            alt="A beautifully crafted cake, lauded by Lydia as the best Sara has ever made, suggesting intricate details and delicious flavor."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A beautifully crafted cake, lauded by Lydia as the best Sara has
+              ever made, suggesting intricate details and delicious flavor.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="travel_cake.jpg"
+            alt="A cake with a travel theme, possibly featuring globes, suitcases, or landmarks."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A cake with a travel theme, possibly featuring globes, suitcases,
+              or landmarks.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="unicorn_birthday_cake.jpg"
+            alt="A magical unicorn-themed birthday cake, often featuring pastel colors, a horn, and flowing mane details."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A magical unicorn-themed birthday cake, often featuring pastel
+              colors, a horn, and flowing mane details.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="watermelon_pinapple_cake.jpg"
+            alt="A refreshing cake with a tropical fruit theme, featuring watermelon and pineapple designs."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A refreshing cake with a tropical fruit theme, featuring
+              watermelon and pineapple designs.
+            </p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg shadow-md">
+          <img
+            src="wedding_rose_tiered_cake.jpg"
+            alt="A beautiful tiered wedding cake adorned with delicate rose decorations."
+            class="w-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <p class="text-white text-center p-2">
+              A beautiful tiered wedding cake adorned with delicate rose
+              decorations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const images = [
+      {
+        src: '2nd_birthday_cake.jpg',
+        alt: "A two-tiered birthday cake decorated with colorful sprinkles and a '2' candle.",
+      },
+      {
+        src: '50th_aniverarsary_cake.png',
+        alt: 'An elegant multi-tiered cake for a 50th anniversary, possibly with gold accents.',
+      },
+      {
+        src: 'baby_box_cake.jpg',
+        alt: 'A novelty cake shaped like a gift box with baby-themed decorations.',
+      },
+      {
+        src: 'baby_prince_cake.png',
+        alt: 'A baby prince-themed cake, perhaps with a crown and blue or gold accents.',
+      },
+      {
+        src: 'black_and_white_cake.jpg',
+        alt: 'A sophisticated black and white themed cake, possibly with geometric patterns or floral designs.',
+      },
+      {
+        src: 'buz_lightyear_cake.png',
+        alt: 'A Buzz Lightyear themed cake, featuring the iconic space ranger from Toy Story.',
+      },
+      {
+        src: 'chicago_city_wedding_cake.png',
+        alt: 'A wedding cake decorated with elements inspired by the Chicago city skyline.',
+      },
+      {
+        src: 'chucks_shoe_cake.jpg',
+        alt: 'A novelty cake expertly shaped and decorated to resemble a Chuck Taylor sneaker.',
+      },
+      {
+        src: 'cop_donut_cake.png',
+        alt: 'A fun cake designed with a police officer theme, possibly featuring donuts.',
+      },
+      {
+        src: 'cute_elephant_baby_shower_cake.png',
+        alt: 'A charming baby shower cake adorned with cute elephant decorations.',
+      },
+      {
+        src: 'cute_elephent_baby_shower_cake.png',
+        alt: 'A delightful baby shower cake featuring adorable elephant designs.',
+      },
+      {
+        src: 'dr_suis_cake.png',
+        alt: 'A whimsical cake inspired by Dr. Seuss, featuring bright colors and playful characters.',
+      },
+      {
+        src: 'dragon_birthday_cake.jpg',
+        alt: 'An impressive birthday cake shaped like or decorated with a dragon, possibly in vibrant colors.',
+      },
+      {
+        src: 'gold_40th_birthday_cake.jpg',
+        alt: 'A celebratory 40th birthday cake, elegantly decorated with gold accents.',
+      },
+      {
+        src: 'Herry_potter_sorting_hat_cake.jpg',
+        alt: 'A Harry Potter themed cake featuring the iconic Sorting Hat, possibly with house colors.',
+      },
+      {
+        src: 'Herry_Potter_wizard_cake.jpg',
+        alt: 'A magical Harry Potter wizard themed cake, incorporating elements like wands or spell books.',
+      },
+      {
+        src: 'iowa_hawk_eys_drum_cake.jpg',
+        alt: 'A highly detailed cake shaped like a drum, representing the Iowa Hawkeyes sports team.',
+      },
+      {
+        src: 'marching_band_cake.png',
+        alt: 'A cake celebrating a marching band, possibly featuring musical instruments or a band uniform.',
+      },
+      {
+        src: 'metra_cake.jpg',
+        alt: 'A novelty cake designed to resemble a Metra commuter train, likely for a train enthusiast.',
+      },
+      {
+        src: 'minion_cake.jpg',
+        alt: 'A fun cake featuring a Minion character from Despicable Me, with its distinctive yellow color and goggles.',
+      },
+      {
+        src: 'muppets_monster_cake.jpg',
+        alt: 'A cake featuring a monster character from The Muppets, likely Cookie Monster or Animal.',
+      },
+      {
+        src: 'oh_dear_cake.jpg',
+        alt: 'A cute cake with a deer theme, possibly for a baby shower or nature lover.',
+      },
+      {
+        src: 'painting_cake.png',
+        alt: "An artistic cake designed to resemble a painting or an artist's palette, with colorful icing.",
+      },
+      {
+        src: 'perfume_cake.jpg',
+        alt: 'A stylish cake shaped and decorated to look like a perfume bottle, possibly for a fashion enthusiast.',
+      },
+      {
+        src: 'pink_bow_cake.jpg',
+        alt: 'A charming cake adorned with a pink bow, suitable for a feminine celebration.',
+      },
+      {
+        src: 'pop_corn_soda_cake.png',
+        alt: 'A fun cake featuring popular movie snacks like popcorn and soda.',
+      },
+      {
+        src: 'pyrimad_cake.png',
+        alt: 'A unique cake shaped like a pyramid, possibly with ancient Egyptian-inspired details.',
+      },
+      {
+        src: 'red_dress_cake.jpg',
+        alt: 'An elegant cake designed to resemble a flowing red dress, with intricate detailing.',
+      },
+      {
+        src: 'red_tiered_draggon_cake.jpg',
+        alt: 'A majestic tiered cake featuring a red dragon, possibly with intricate scales and fiery details.',
+      },
+      {
+        src: 'retiermrent_cake.jpg',
+        alt: 'A celebratory retirement cake, possibly decorated with themes of relaxation or hobbies.',
+      },
+      {
+        src: 'retro_cake.jpg',
+        alt: 'A cake with a vibrant retro theme, featuring nostalgic colors and designs from past decades.',
+      },
+      {
+        src: 'rubics_cube_cake.jpg',
+        alt: "A clever cake designed to look exactly like a colorful Rubik's Cube.",
+      },
+      {
+        src: 'sad_ice_cream_cake.jpg',
+        alt: "A whimsical cake featuring a melting ice cream cone with a humorous 'sad' expression.",
+      },
+      {
+        src: 'soccer_cake.jpg',
+        alt: 'A sporty cake with a soccer theme, possibly shaped like a soccer ball or featuring field markings.',
+      },
+      {
+        src: 'sponge_bob_cake.jpg',
+        alt: 'A cheerful SpongeBob SquarePants themed cake, featuring the beloved character and elements from Bikini Bottom.',
+      },
+      {
+        src: 'starwars_r2d2_cake.jpg',
+        alt: 'An impressive Star Wars cake designed to replicate the iconic droid R2D2.',
+      },
+      {
+        src: 'steelers_football_cake.jpg',
+        alt: 'A cake celebrating the Pittsburgh Steelers football team, adorned with team colors and logos.',
+      },
+      {
+        src: 'the_best_cake_sara_has_ever_made_says_lydia.png',
+        alt: 'A beautifully crafted cake, lauded by Lydia as the best Sara has ever made, suggesting intricate details and delicious flavor.',
+      },
+      {
+        src: 'travel_cake.jpg',
+        alt: 'A cake with a travel theme, possibly featuring globes, suitcases, or landmarks.',
+      },
+      {
+        src: 'unicorn_birthday_cake.jpg',
+        alt: 'A magical unicorn-themed birthday cake, often featuring pastel colors, a horn, and flowing mane details.',
+      },
+      {
+        src: 'watermelon_pinapple_cake.jpg',
+        alt: 'A refreshing cake with a tropical fruit theme, featuring watermelon and pineapple designs.',
+      },
+      {
+        src: 'wedding_rose_tiered_cake.jpg',
+        alt: 'A beautiful tiered wedding cake adorned with delicate rose decorations.',
+      },
+    ];
+
+    const carousel = document.querySelector('.carousel');
+    let currentIndex = 0;
+
+    function createCarouselItem(image, index) {
+      const div = document.createElement('div');
+      div.className = `absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+        index === 0 ? 'opacity-100' : 'opacity-0'
+      }`;
+      div.innerHTML = `
+            <img src="${image.src}" alt="${image.alt}" class="w-auto h-96 object-cover rounded-lg" />
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 text-white">
+                <p class="text-sm">${image.alt}</p>
+            </div>
+        `;
+      return div;
+    }
+
+    images.forEach((image, index) => {
+      carousel.appendChild(createCarouselItem(image, index));
+    });
+
+    const carouselItems = Array.from(carousel.children);
+
+    function showNextImage() {
+      carouselItems[currentIndex].classList.remove('opacity-100');
+      carouselItems[currentIndex].classList.add('opacity-0');
+      currentIndex = (currentIndex + 1) % images.length;
+      carouselItems[currentIndex].classList.remove('opacity-0');
+      carouselItems[currentIndex].classList.add('opacity-100');
+    }
+
+    setInterval(showNextImage, 5000); // Change image every 5 seconds
+  </script>
+</body>
+
+ <!-- Footer -->
+    <footer class="bg-gray-50 ">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h4 class="text-lg font-semibold">Sweet Bakes Chicago</h4>
+            <nav class="mt-4 space-y-2">
+              <a href="/about.html" class="block text-teal-700 hover:text-teal-500">About Us</a>
+              <a href="/contact.html" class="block text-teal-700 hover:text-teal-500">Contact</a>
+              <a href="https://www.facebook.com/sweetbakeschicago" target="_blank" rel="noopener"
+                class="block text-teal-700 hover:text-teal-500">Facebook</a>
+            </nav>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold">WHAT OUR CUSTOMERS HAVE TO SAY</h4>
+            <div class="mt-4 bg-white border rounded-lg p-4 shadow-sm">
+              <blockquote class="text-sm text-gray-700 italic">"Sara's cakes are beautiful and delicious. She is reliable and kind. My husband and I saved our top layer to eat on our anniversary, but he has had to persuade me more than once to not eat it early."</blockquote>
+              <p class="mt-3 text-xs text-gray-500">— Jane Morris</p>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold">Get in touch</h4>
+            <address class="not-italic mt-4 text-gray-700 text-sm space-y-2">
+              <div>Chicago IL</div>
+              <div>Phone: <a href="tel:+7738700026" class="text-amber-800  hover:underline">+1 (773) 870-0026</a></div>
+              <div>Email: <a href="mailto:hello@sweetbakeschicago.com"
+                  class="text-amber-800 hover:underline">sweetbakeschicago@gmail.com</a></div>
+            </address>
+            <div class="mt-6">
+              <a href="/contact.html"
+                class="inline-block bg-orange-200  text-gray-400 px-4 py-2 rounded hover:bg-orange-100">Contact Us</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-xs text-gray-400 text-center">
+          © <span id="year"></span> Sweet Bakes Chicago. All rights reserved.
+        </div>
+      </div>
+    </footer>

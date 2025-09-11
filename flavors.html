@@ -1,15 +1,13 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>sweetbakeschicago.com</title>
-  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
-  <!-- Your built Tailwind file -->
+  <title>Cakes — Sweet Bakes Chicago</title>
+
+  <!-- Tailwind build -->
   <link href="/src/style.css" rel="stylesheet" />
 </head>
-
 <body class="antialiased text-gray-800 bg-white">
 
  <!-- NAV + HERO COMBINED -->
@@ -223,107 +221,289 @@
   </nav>
 </div> 
 
-  <!-- FULL-WIDTH HERO IMAGE -->
+
+  <!-- HERO -->
   <section class="w-full">
-    <div class="w-full h-64 md:h-96 bg-gray-100">
-      <img src="/public/halloween_hero.png" alt="Hero - Sweet Bakes Chicago" class="object-cover w-full h-full" />
+    <div class="w-full h-44 md:h-64 bg-gray-100">
+      <img src="public/cake_hero_cupcakes.jpg" alt="Cakes hero" class="object-cover w-full h-full" />
     </div>
   </section>
 
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <!-- Order CTA -->
-    <section class="text-center">
-      <h2 class="text-2xl md:text-3xl font-semibold">Order your nut free treats today!</h2>
-      <div class="mt-6 flex justify-center">
-        <img src="/public/be_allergy_safe_pumpkin.jpg" alt="Nut free treats"
-          class="w-48 h-48 object-cover rounded-lg shadow-sm" />
-      </div>
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+
+    <!-- Intro -->
+    <section class="prose lg:prose-lg">
+      <h1 class="text-3xl font-semibold">Cakes & Flavors</h1>
+      <p>We offer a wide range of classic and specialty cake flavors. All cakes are made in our nut-free
+        facility. If you have dietary needs (gluten-free, dairy-free, sugar-free) please contact us
+        to confirm availability for specific designs.</p>
     </section>
 
-    <!-- Fall treat ideas -->
-    <section class="mt-12 text-2xl">
-      <h3 class="text-6xl font-bold mb-6 text-center" style="font-family: 'Creepster', cursive; color:#D9480F;">
-        fall treat ideas
-      </h3> <!-- Grid: 3 cols x 2 rows on large screens -->
+    <!-- Traditional Flavors -->
+    <section class="bg-white border rounded-lg p-6 shadow-sm">
+      <h2 class="text-2xl font-semibold mb-4">Traditional Flavors</h2>
+      <p class="mb-4 text-sm text-gray-600">Gluten, Dairy, Egg, and Sugar Free Options Available</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <ul class="list-disc list-inside space-y-2">
+          <li>White</li>
+          <li>Yellow</li>
+          <li>Chocolate</li>
+          <li>Red Velvet</li>
+          <li>Strawberry</li>
+          <li>Lemon</li>
+        </ul>
+
+        <ul class="list-disc list-inside space-y-2">
+          <li>Lime</li>
+          <li>Raspberry</li>
+          <li>Marble (swirl of two flavors)</li>
+          <li>Mocha</li>
+          <li>Coffee</li>
+          <li>Cinnamon</li>
+        </ul>
+      </div>
+
+      <p class="mt-4 text-sm text-gray-600">Can't find what you want? We often create custom flavors — ask when
+        placing your order.</p>
+    </section>
+
+    <!-- Frosting Types -->
+    <section class="bg-white border rounded-lg p-6 shadow-sm">
+      <h2 class="text-2xl font-semibold mb-4">Frosting</h2>
+      <p class="mb-4 text-sm text-gray-600">Dairy, Egg, and Sugar Free Options Available</p>
+      <p class="mb-4 text-sm text-gray-600">*Additional fees may apply</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div>
+          <h3 class="font-semibold">Classic Frostings</h3>
+          <ul class="list-disc list-inside mt-3 space-y-2">
+            <li>American Buttercream</li>
+            <li>Italian Buttercream</li>
+            <li>Sugar Free Buttercream (made with monk fruit)</li>
+            <li>Cream Cheese</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold">Specialty Frostings</h3>
+          <ul class="list-disc list-inside mt-3 space-y-2">
+            <li>Ganache (White, Milk, or Dark)</li>
+            <li>Whipped Cream</li>
+            <li>Fondant</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="mt-4 text-sm text-gray-600">We tint and flavor frostings to match your design — final color may differ slightly.</p>
+    </section>
+
+    <!-- Frosting Flavor Additions -->
+    <section class="bg-white border rounded-lg p-6 shadow-sm">
+      <h2 class="text-2xl font-semibold mb-4">Frosting Flavor Additions</h2>
+      <p class="mb-4 text-sm text-gray-600">Add any of these flavors to your frosting for an additional kick of flavor.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="p-3 border rounded">
+          <h4 class="font-semibold">Classic Add-ins</h4>
+          <ul class="mt-2 text-sm space-y-1">
+            <li>Chocolate</li>
+            <li>Lemon</li>
+            <li>Lime</li>
+            <li>Orange</li>
+            <li>Strawberry</li>
+          </ul>
+        </div>
+
+        <div class="p-3 border rounded">
+          <h4 class="font-semibold">Fruit & Citrus</h4>
+          <ul class="mt-2 text-sm space-y-1">
+            <li>Blackberry</li>
+            <li>Raspberry</li>
+            <li>Rosewater</li>
+            <li>Lavender</li>
+            <li>Cinnamon</li>
+          </ul>
+        </div>
+
+        <div class="p-3 border rounded">
+          <h4 class="font-semibold">Decadent Flavors</h4>
+          <ul class="mt-2 text-sm space-y-1">
+            <li>Salted Caramel</li>
+            <li>Maple</li>
+            <li>Coffee</li>
+            <li>Peppermint</li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-4 text-sm text-gray-600">These are just a few of our options. Contacts us if you have something else in mind.</p>
+      <p class="mt-1 text-sm text-gray-600">The possibilities are endless!</p>
+    </section>
+
+    <!-- Fillings -->
+    <section class="bg-white border rounded-lg p-6 shadow-sm">
+      <h2 class="text-2xl font-semibold mb-4">Fillings</h2>
+      <p class="mb-4 text-sm text-gray-600">*Additional fees may apply</p>
+      <p class="mb-4 text-sm text-gray-600">Other flavors available on request</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <ul class="list-disc list-inside space-y-2">
+          <li>Fruit Preserves</li>
+          <li>Strawberry</li>
+          <li>Raspberry</li>
+          <li>Blackberry</li>
+          <li>Peach</li>
+          <li>Cherry</li>
+        </ul>
+
+        <ul class="list-disc list-inside space-y-2">
+          <li>Other</li>
+          <li>Chocolate Ganache</li>
+          <li>White Chocolate Ganache</li>
+          <li>Caramel</li>
+          <li>Chocolate Mousse</li>
+          <li>Vanilla Mousse</li>
+        </ul>
+      </div>
+
+      <p class="mt-4 text-sm text-gray-600">Fresh fruit is also available depending on the season, but it is not recommended for outdoor parties during the summer months.</p>
+    </section>
+
+    <!-- Signature Gourmet Cakes (Sara's specialties) -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Signature Gourmet Cakes — Sara's Specialties</h2>
+
+      <p class="text-sm text-gray-600 mb-6">These are our specialty designs and flavor combinations — perfect for celebrations where you want something unique and memorable.</p>
+
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <article class="bg-white border rounded-lg overflow-hidden shadow-sm flex flex-col">
-          <div class="h-40 bg-gray-100">
-            <img src="/public/jack-o-lantern-cupcakes.webp" alt="Pumpkin Cupcakes" class="object-cover w-full h-full" />
-          </div>
-          <div class="p-4 mt-auto">
-            <h4 class="font-bold" style="font-family: 'Creepster', cursive; color:#F97316;">
-              Cupcakes
-            </h4>
-            <p class="font-extrabold mt-2 text-lg" style="color:#6D28D9;">Starting @ $35 a dozen</p>
+        <!-- Card 1 -->
+        <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
+          <img src="chocolate_chip_cookie_dough.jpg" alt="Chocolate Chip Cookie Dough" class="w-full h-44 object-contain" />
+          <div class="p-4">
+            <h3 class="font-semibold">Chocolate Chip Cookie Dough</h3>
+            <p class="mt-2 text-sm text-gray-700">Brown sugar cake filled with egg-less chocolate chip cookie dough. Frosted with salted vanilla buttercream or chocolate ganache.</p>
           </div>
         </article>
 
-        <article class="bg-white border rounded-lg overflow-hidden shadow-sm flex flex-col">
-          <div class="h-40 bg-gray-100">
-            <img src="/public/gengerbreak_skelotons.jpeg" alt="Skeloton Cookie" class="object-cover w-full h-full" />
-          </div>
-          <div class="p-4 mt-auto">
-            <h4 class="font-bold" style="font-family: 'Creepster', cursive; color:#F97316;">
-              Cookies
-            </h4>
-            <p class="font-extrabold mt-2 text-lg" style="color:#6D28D9;">Starting @ $34 a dozen</p>
-          </div>
-        </article>
-
-        <article class="bg-white border rounded-lg overflow-hidden shadow-sm flex flex-col">
-          <div class="h-40 bg-gray-100">
-            <img src="/public/halloween_donuts.jpg" alt="Caramel Apple Tart" class="object-cover w-full h-full" />
-          </div>
-          <div class="p-4 mt-auto">
-            <h4 class="font-bold" style="font-family: 'Creepster', cursive; color:#F97316;">
-              Donuts</h4>
-            <p class="font-extrabold mt-2 text-lg" style="color:#6D28D9;">Starting @ $30 a dozen</p>
+        <!-- Card 2 -->
+        <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
+          <img src="can_i_have_smore.jpg" alt="May I Have S'more" class="w-full h-44 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold">May I Have S'more</h3>
+            <p class="mt-2 text-sm text-gray-700">Graham cracker cake filled with chocolate ganache. Frosted with toasted
+marshmallow frosting and topped with ganache drip.
+</p>
           </div>
         </article>
 
-        <article class="bg-white border rounded-lg overflow-hidden shadow-sm flex flex-col">
-          <div class="h-40 bg-gray-100">
-            <img src="/public/pretzel_pie.jpg" alt="Pretzel Pie" class="object-cover w-full h-full" />
-          </div>
-          <div class="p-4 mt-auto">
-            <h4 class="font-bold" style="font-family: 'Creepster', cursive; color:#F97316;">
-              Pies
-            </h4>
-            <p class="font-extrabold mt-2 text-lg" style="color:#6D28D9;">Starting @ $27 a dozen</p>
-          </div>
-        </article>
-
-        <article class="bg-white border rounded-lg overflow-hidden shadow-sm flex flex-col">
-          <div class="h-40 bg-gray-100">
-            <img src="/public/carmal_cake.jpg" alt="White carmel cake" class="object-cover w-full h-full" />
-          </div>
-          <div class="p-4 mt-auto">
-            <h4 class="font-bold" style="font-family: 'Creepster', cursive; color:#F97316;">
-              Cake
-            </h4>
-            <p class="font-extrabold mt-2 text-lg" style="color:#6D28D9;">Starting at $35</p>
+        <!-- Card 3 -->
+        <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
+          <img src="berry_lemon.jpg" alt="Triple Berry Lemon" class="w-full h-44 object-contain" />
+          <div class="p-4">
+            <h3 class="font-semibold">Triple Berry Lemon</h3>
+            <p class="mt-2 text-sm text-gray-700">Light and fluffy lemon cake with whole blueberries. Filled with a layer of
+strawberry, and a layer of raspberry Italian buttercream. Frosted in lemon
+Italian buttercream.</p>
           </div>
         </article>
 
-        <article class="bg-white border rounded-lg overflow-hidden shadow-sm flex flex-col">
-          <div class="h-40 bg-gray-100">
-            <img src="/public/halloween_macaroons.jpg" alt="Pear & Honey Tart" class="object-cover w-full h-full" />
-          </div>
-          <div class="p-4 mt-auto">
-            <h4 class="font-bold" style="font-family: 'Creepster', cursive; color:#F97316;">
-              Macarons
-            </h4>
-            <p class="font-extrabold mt-2 text-lg" style="color:#6D28D9;">Starting @ $40 a dozen</p>
+        <!-- Card 4 -->
+        <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
+          <img src="ube_dream.jpg" alt="Ube Dream" class="w-full h-44 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold">Ube Dream</h3>
+            <p class="mt-2 text-sm text-gray-700">This boba tea inspired cake is made with real ube! It is an ube sponge filled with vanilla mousse and frosted in an ube and
+mascarpone buttercream. It's naturally purple!</p>
           </div>
         </article>
 
+        <!-- Card 5 -->
+        <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
+          <img src="chocolate_chai.jpg" alt="Chocolate Chai Cake Pops" class="w-full h-44 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold">Chocolate Chai</h3>
+            <p class="mt-2 text-sm text-gray-700">Our delicious chocolate cake mixed with real black tea, cardamom, cinnamon, ginger, and black pepper. Filled and frosted in Chai tea Italian
+buttercream. Topped with chocolate ganache drip.</p>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
+          <img src="chocolate_burbon.jpg" alt="Chocolate Bourbon" class="w-full h-44 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold">Chocolate Bourbon</h3>
+            <p class="mt-2 text-sm text-gray-700">Contains alcohol, for adults only Super moist chocolate cake infused with real bourbon whiskey. Filled with
+chocolate ganache. Topped with chocolate bourbon buttercream.</p>
+          </div>
+        </article>
+        </div>
+
+    <h2 class="text-2xl font-semibold m-4 text-center">Other Specialties</h2> 
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 7 -->
+        <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
+          <div class="p-4">
+            <h3 class="font-semibold">Blackberry Peach</h3>
+            <p class="mt-2 text-sm text-gray-700">Vanilla cake filled with a house made peach preserve. Frosted with blackberry buttercream and topped with a fresh blackberry (subject to seasonal availability).</p>
+          </div>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
+          <div class="p-4">
+            <h3 class="font-semibold">Honey Ginger</h3>
+            <p class="mt-2 text-sm text-gray-700">Delicious honey cake infused with ginger. Filled with a Greek yogurt honey mousse and frosted in a whipped white chocolate ganache. Bump it up with an extra splash of orange zest for an addition burst of flavor (optional).</p>
+          </div>
+        </article>
+
+        <!-- Card 9 -->
+        <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
+          <div class="p-4">
+            <h3 class="font-semibold">Maple Bacon</h3>
+            <p class="mt-2 text-sm text-gray-700">Vanilla cake with real bacon crumbles inside. Filled and frosted with maple Italian buttercream and topped with real crispy bacon strips.</p>
+          </div>
+        </article>
+
+        <!-- Card 10 -->
+        <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
+          <div class="p-4">
+            <h3 class="font-semibold">Cherry Lime</h3>
+            <p class="mt-2 text-sm text-gray-700">Lime flavored cake with cherry filling. Topped with cherry lime buttercream and a maraschino cherries.</p>
+          </div>
+        </article>
+
+        <!-- Card 11 -->
+        <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
+          <div class="p-4">
+            <h3 class="font-semibold">Margarita</h3>
+            <p class="mt-2 text-sm text-gray-700">Contains alcohol, for adults only. Lime flavored cake infused with real tequila. Frosted with tequila lime buttercream and sprinkled with salt.</p>
+          </div>
+        </article>
+
+        <!-- Card 12 -->
+        <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
+          <div class="p-4">
+            <h3 class="font-semibold">Black Forest</h3>
+            <p class="mt-2 text-sm text-gray-700">Contains alcohol, for adults only. Thin layers of chocolate cake infused with cherry Kirsch. Alternately layered with cherry filling and whipped cream. Frosted in whipped cream and topped with maraschino cherries and chocolate shavings.</p>
+          </div>
+        </article>
+
+        <!-- Card 13 -->
+        <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
+          <div class="p-4">
+            <h3 class="font-semibold">Lucky Clover</h3>
+            <p class="mt-2 text-sm text-gray-700">Contains alcohol, for adults only. Green Velvet cake layered with rich mint chocolate ganache filling. Frosted with Bailey's Irish Cream frosting.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="mt-6 text-sm">
+        <p>Want a custom version of a signature cake? Contact us to discuss flavors, dietary needs, and custom decor.</p>
+        <a href="/contact.html" class="inline-block mt-3 bg-rose-600 text-white px-4 py-2 rounded hover:bg-rose-700">Contact / Order</a>
       </div>
     </section>
+
   </main>
 
-
-   <!-- Footer -->
-    <footer class="bg-gray-50">
+ <!-- Footer -->
+    <footer class="bg-gray-50 ">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -354,7 +534,7 @@
             </address>
             <div class="mt-6">
               <a href="/contact.html"
-                class="inline-block bg-orange-200  text-grey-400 px-4 py-2 rounded hover:bg-orange-100">Contact Us</a>
+                class="inline-block bg-orange-200  text-gray-400 px-4 py-2 rounded hover:bg-orange-100">Contact Us</a>
             </div>
           </div>
         </div>
@@ -389,6 +569,7 @@
         }
       })();
     </script>
-</body>
+
+    </body>
 
 </html>

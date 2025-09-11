@@ -10,8 +10,6 @@
   <link href="/src/style.css" rel="stylesheet" />
 </head>
 
-<body class="antialiased text-gray-800 bg-white">
-
  <!-- NAV + HERO COMBINED -->
 <header class="bg-white shadow-sm">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -223,107 +221,225 @@
   </nav>
 </div> 
 
-  <!-- FULL-WIDTH HERO IMAGE -->
-  <section class="w-full">
-    <div class="w-full h-64 md:h-96 bg-gray-100">
-      <img src="/public/halloween_hero.png" alt="Hero - Sweet Bakes Chicago" class="object-cover w-full h-full" />
+<main id="content" class="pricing-page max-w-6xl mx-auto px-4 py-10">
+  <!-- Intro -->
+  <section class="intro mb-8">
+    <p class="text-gray-700 text-base">
+      Pricing listed is based off of traditional cake flavors with basic
+      buttercream frosting and simple decorations unless otherwise noted.
+      Certain flavors, fillings and decoration options may be subject to
+      additional charges. Please contact us for specific pricing.
+    </p>
+  </section>
+
+  <!-- Wedding / Tiered Cakes -->
+  <section id="wedding-tiered" class="mb-10 bg-white shadow-sm rounded-lg p-6">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-3">Wedding/Tiered Cakes *</h2>
+    <p class="text-gray-700">
+      Prices for cakes iced and decorated with buttercream frosting start at
+      $5.50 per serving. Prices for cakes iced and decorated with fondant
+      start at $7 per serving.
+    </p>
+  </section>
+
+  <!-- Party Cakes -->
+  <section id="party-cakes" class="mb-10">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Party Cakes</h2>
+
+    <!-- Four sample images -->
+    <div
+      class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6"
+      aria-label="Examples of party cakes"
+    >
+      <figure class="bg-white rounded overflow-hidden shadow">
+        <img src="part_cake_star_power.jpg" alt="Start power party cake" class="w-full h-40 object-contain" />
+        <figcaption class="p-2 text-sm text-gray-600">Star Power rainbow</figcaption>
+      </figure>
+      <figure class="bg-white rounded overflow-hidden shadow">
+        <img src="cake_top_hat.jpg" alt="red cake with white dots and yellow flowers" class="w-full h-40 object-contain" />
+        <figcaption class="p-2 text-sm text-gray-600">Garden party top hat</figcaption>
+      </figure>
+      <figure class="bg-white rounded overflow-hidden shadow">
+        <img src="oreo_party_cake.jpg" alt="Oreo Party Cake" class="w-full h-40 object-contain" />
+        <figcaption class="p-2 text-sm text-gray-600">Oreo explosion!</figcaption>
+      </figure>
+      <figure class="bg-white rounded overflow-hidden shadow">
+        <img src="cake_mothers_day.jpg" alt="Mothers day cake" class="w-full h-40 object-contain" />
+        <figcaption class="p-2 text-sm text-gray-600">Mothers day strawberry</figcaption>
+      </figure>
+    </div>
+
+    <!-- Pricing table -->
+    <div class="overflow-x-auto mb-4">
+      <table class="min-w-full bg-white rounded-lg shadow-sm divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="text-left px-4 py-3 text-sm font-medium text-gray-700">Sizes</th>
+            <th class="text-left px-4 py-3 text-sm font-medium text-gray-700">Servings</th>
+            <th class="text-left px-4 py-3 text-sm font-medium text-gray-700">Traditional Favor Price</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700 divide-y divide-gray-100">
+          <tr>
+            <td class="px-4 py-3">6"</td>
+            <td class="px-4 py-3">8-12</td>
+            <td class="px-4 py-3">$35.00</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3">8"</td>
+            <td class="px-4 py-3">15-25</td>
+            <td class="px-4 py-3">$55.00</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3">10"</td>
+            <td class="px-4 py-3">30-40</td>
+            <td class="px-4 py-3">$82.00</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3">12"</td>
+            <td class="px-4 py-3">50-60</td>
+            <td class="px-4 py-3">$110.00</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3">14"</td>
+            <td class="px-4 py-3">70-80</td>
+            <td class="px-4 py-3">$155.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-gray-700">
+      See <a href="flavors.html" class="text-indigo-600 hover:underline">Flavors page</a> for a list of traditional and
+      Signature flavors. Custom flavors and fillings are available. Additional
+      charges apply.
+    </p>
+  </section>
+
+  <!-- Smash Cakes -->
+  <section id="smash-cakes" class="mb-10 bg-white shadow-sm rounded-lg p-6">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-3">Smash Cakes</h2>
+    <p class="text-gray-700">
+      1st birthday cakes come with a complimentary smash cake for the child.
+      Must mention smash cake when ordering.
+    </p>
+  </section>
+
+  <!-- Cupcakes -->
+  <section id="cupcakes" class="mb-10">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Cupcakes*</h2>
+
+    <!-- 5 inline images for cupcakes -->
+    <div
+      class="flex gap-4 overflow-x-auto pb-2 mb-4"
+      aria-label="Cupcake gallery"
+    >
+      <img src="pumkin_spice_cupcake.jpg" alt="Cupcake pumkin spice" class="w-36 h-36 object-cover rounded shadow-sm flex-shrink-0" />
+      <img src="cup_cake_minis_halloween.jpg" alt="Mini halloween cupcakes.jpg" class="w-36 h-36 object-cover rounded shadow-sm flex-shrink-0" />
+      <img src="cup_cake_lemon_zest.png" alt="Cupcakes with lemon zest" class="w-36 h-36 object-cover rounded shadow-sm flex-shrink-0" />
+      <img src="cup_cake_minis_nightmare_before_christmas.jpg" alt="Nightmare before Christmas cupcakes 4" class="w-36 h-36 object-cover rounded shadow-sm flex-shrink-0" />
+      <img src="cupcakes_cherry.png" alt="Cupcake with cherry" class="w-36 h-36 object-cover rounded shadow-sm flex-shrink-0" />
+    </div>
+
+    <p class="text-gray-700 mb-2">All cupcakes are available by the dozen</p>
+
+    <p class="text-gray-700">
+      Traditional Flavor: <span class="font-medium">$35.00</span><br />
+      Signature flavor and Fillings available. Additional charges may apply.
+    </p>
+  </section>
+
+  <!-- Mini Cupcakes -->
+  <section id="mini-cupcakes" class="mb-10">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Mini Cupcakes</h2>
+
+    <div class="flex gap-4 overflow-x-auto pb-2 mb-4" aria-label="Mini cupcake gallery">
+      <img src="cup_cake_minis_fruit.jpg" alt="Mini cupcake with fruit" class="w-28 h-28 object-cover rounded shadow-sm flex-shrink-0" />
+      <img src="mini_cup_cakes_green.jpg" alt="green mini cupcakes" class="w-28 h-28 object-cover rounded shadow-sm flex-shrink-0" />
+      <img src="mini_cup_cake_white_red.jpg" alt="white cup cakes with red filling" class="w-28 h-28 object-cover rounded shadow-sm flex-shrink-0" />
+      <img src="cup_cake_minis_flowers.jpg" alt="Mini cupcake 4" class="w-28 h-28 object-cover rounded shadow-sm flex-shrink-0" />
+      <img src="mini_cup_cakes_with_carmel_drizzle.jpg" alt="Mini cupcake with carmel drizzle" class="w-28 h-28 object-cover rounded shadow-sm flex-shrink-0" />
+    </div>
+
+    <p class="text-gray-700">
+      Traditional Flavor: <span class="font-medium">$15.00</span> (2 dozen minimum order required)
+    </p>
+  </section>
+
+  <!-- Cake Pucks -->
+  <section id="cake-pucks" class="mb-10">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Cake Pucks</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4" aria-label="Cake pucks examples">
+  <figure class="bg-white rounded overflow-hidden shadow flex flex-col items-center">
+    <img src="new_cake_pucks.png" alt="New item cake pucks!" class="h-full w-auto object-contain" />
+    <figcaption class="p-3 text-sm text-gray-600">Traditional cake pucks</figcaption>
+  </figure>
+
+  <figure class="bg-white rounded overflow-hidden shadow flex flex-col items-center">
+    <img src="cake-puck_anatomy.png" alt="Anatomy of a cake puck" class="h-full w-auto object-contain" />
+    <figcaption class="p-3 text-sm text-gray-600">Filled / Signature pucks</figcaption>
+  </figure>
+</div>
+
+    <p class="text-gray-700">
+      Traditional Flavor <span class="font-medium">$35 per dozen</span><br />
+      Filled/Signature Flavor <span class="font-medium">$40+ per dozen</span><br />
+      Contact us for more information
+    </p>
+  </section>
+
+  <!-- Cake Pops -->
+  <section id="cake-pops" class="mb-10">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Cake Pops</h2>
+
+    <div class="flex gap-4 overflow-x-auto pb-2 mb-4" aria-label="Cake pop gallery">
+      <img src="cake_pop_flowers.jpg" alt="Cake pop flowers" class="w-28 h-28 object-cover rounded-full shadow-sm flex-shrink-0" />
+      <img src="cake_pop_rose.jpg" alt="Cake pop rose" class="w-28 h-28 object-cover rounded-full shadow-sm flex-shrink-0" />
+      <img src="cake_pop_unicorn.jpg" alt="unicorn cake pop" class="w-28 h-28 object-cover rounded-full shadow-sm flex-shrink-0" />
+      <img src="cake_pops_blue_yellow.jpg" alt="Cake pop 4" class="w-28 h-28 object-cover rounded-full shadow-sm flex-shrink-0" />
+      <img src="cake_pops_red_with_yellow_flowers.jpg" alt="Red Cake pops with yellow flowers." class="w-28 h-28 object-cover rounded-full shadow-sm flex-shrink-0" />
+    </div>
+
+    <div class="text-gray-700 mb-2">
+      <div>Traditional Flavor</div>
+      <div>Custom Decorated</div>
+      <div class="font-medium mt-2">$35.00</div>
+      <div class="text-sm text-gray-600">$ dependent on design</div>
+    </div>
+
+    <p class="text-gray-700">
+      Cake Pops come packaged together in a box. Individual packaging available
+      for an additional <span class="font-medium">$5 a dozen</span>.
+    </p>
+  </section>
+
+  <!-- Delivery -->
+  <section id="delivery" class="mb-10 bg-white shadow-sm rounded-lg p-6">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-3">Delivery</h2>
+    <p class="text-gray-700 mb-4">
+      There is a <span class="font-medium">$5.00</span> minimum charge for all products delivered.
+      See map below for approximate delivery fees. Pricing subject to change
+      depending on traffic times and current gas prices.
+    </p>
+
+    <div class="w-full bg-gray-50 rounded overflow-hidden shadow-inner flex flex-col items-center">
+      <img src="public/updated-delivery-map_orig.jpg" alt="Delivery area map" class="h-full object-cover" />
     </div>
   </section>
 
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <!-- Order CTA -->
-    <section class="text-center">
-      <h2 class="text-2xl md:text-3xl font-semibold">Order your nut free treats today!</h2>
-      <div class="mt-6 flex justify-center">
-        <img src="/public/be_allergy_safe_pumpkin.jpg" alt="Nut free treats"
-          class="w-48 h-48 object-cover rounded-lg shadow-sm" />
-      </div>
-    </section>
-
-    <!-- Fall treat ideas -->
-    <section class="mt-12 text-2xl">
-      <h3 class="text-6xl font-bold mb-6 text-center" style="font-family: 'Creepster', cursive; color:#D9480F;">
-        fall treat ideas
-      </h3> <!-- Grid: 3 cols x 2 rows on large screens -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <article class="bg-white border rounded-lg overflow-hidden shadow-sm flex flex-col">
-          <div class="h-40 bg-gray-100">
-            <img src="/public/jack-o-lantern-cupcakes.webp" alt="Pumpkin Cupcakes" class="object-cover w-full h-full" />
-          </div>
-          <div class="p-4 mt-auto">
-            <h4 class="font-bold" style="font-family: 'Creepster', cursive; color:#F97316;">
-              Cupcakes
-            </h4>
-            <p class="font-extrabold mt-2 text-lg" style="color:#6D28D9;">Starting @ $35 a dozen</p>
-          </div>
-        </article>
-
-        <article class="bg-white border rounded-lg overflow-hidden shadow-sm flex flex-col">
-          <div class="h-40 bg-gray-100">
-            <img src="/public/gengerbreak_skelotons.jpeg" alt="Skeloton Cookie" class="object-cover w-full h-full" />
-          </div>
-          <div class="p-4 mt-auto">
-            <h4 class="font-bold" style="font-family: 'Creepster', cursive; color:#F97316;">
-              Cookies
-            </h4>
-            <p class="font-extrabold mt-2 text-lg" style="color:#6D28D9;">Starting @ $34 a dozen</p>
-          </div>
-        </article>
-
-        <article class="bg-white border rounded-lg overflow-hidden shadow-sm flex flex-col">
-          <div class="h-40 bg-gray-100">
-            <img src="/public/halloween_donuts.jpg" alt="Caramel Apple Tart" class="object-cover w-full h-full" />
-          </div>
-          <div class="p-4 mt-auto">
-            <h4 class="font-bold" style="font-family: 'Creepster', cursive; color:#F97316;">
-              Donuts</h4>
-            <p class="font-extrabold mt-2 text-lg" style="color:#6D28D9;">Starting @ $30 a dozen</p>
-          </div>
-        </article>
-
-        <article class="bg-white border rounded-lg overflow-hidden shadow-sm flex flex-col">
-          <div class="h-40 bg-gray-100">
-            <img src="/public/pretzel_pie.jpg" alt="Pretzel Pie" class="object-cover w-full h-full" />
-          </div>
-          <div class="p-4 mt-auto">
-            <h4 class="font-bold" style="font-family: 'Creepster', cursive; color:#F97316;">
-              Pies
-            </h4>
-            <p class="font-extrabold mt-2 text-lg" style="color:#6D28D9;">Starting @ $27 a dozen</p>
-          </div>
-        </article>
-
-        <article class="bg-white border rounded-lg overflow-hidden shadow-sm flex flex-col">
-          <div class="h-40 bg-gray-100">
-            <img src="/public/carmal_cake.jpg" alt="White carmel cake" class="object-cover w-full h-full" />
-          </div>
-          <div class="p-4 mt-auto">
-            <h4 class="font-bold" style="font-family: 'Creepster', cursive; color:#F97316;">
-              Cake
-            </h4>
-            <p class="font-extrabold mt-2 text-lg" style="color:#6D28D9;">Starting at $35</p>
-          </div>
-        </article>
-
-        <article class="bg-white border rounded-lg overflow-hidden shadow-sm flex flex-col">
-          <div class="h-40 bg-gray-100">
-            <img src="/public/halloween_macaroons.jpg" alt="Pear & Honey Tart" class="object-cover w-full h-full" />
-          </div>
-          <div class="p-4 mt-auto">
-            <h4 class="font-bold" style="font-family: 'Creepster', cursive; color:#F97316;">
-              Macarons
-            </h4>
-            <p class="font-extrabold mt-2 text-lg" style="color:#6D28D9;">Starting @ $40 a dozen</p>
-          </div>
-        </article>
-
-      </div>
-    </section>
-  </main>
-
-
-   <!-- Footer -->
-    <footer class="bg-gray-50">
+  <!-- Fine print -->
+  <section id="fine-print" class="text-sm text-gray-600">
+    <p>
+      *Prices may vary. Prices listed include basic buttercream frosting and
+      filling. There may be extra charges for variations or ingredients. All
+      pricing is subject to degree of difficulty and supplies needed. Please
+      contact us for more specific information.
+    </p>
+  </section>
+</main>
+ <!-- Footer -->
+    <footer class="bg-gray-50 ">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -354,7 +470,7 @@
             </address>
             <div class="mt-6">
               <a href="/contact.html"
-                class="inline-block bg-orange-200  text-grey-400 px-4 py-2 rounded hover:bg-orange-100">Contact Us</a>
+                class="inline-block bg-orange-200  text-gray-400 px-4 py-2 rounded hover:bg-orange-100">Contact Us</a>
             </div>
           </div>
         </div>
@@ -364,8 +480,7 @@
         </div>
       </div>
     </footer>
-
-    <!-- Small JS: mobile toggle and year -->
+ <!-- Small JS: mobile toggle and year -->
     <script>
       (function () {
         // footer year
@@ -390,5 +505,4 @@
       })();
     </script>
 </body>
-
 </html>
