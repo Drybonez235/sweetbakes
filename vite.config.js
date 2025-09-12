@@ -13,6 +13,17 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        about: resolve(__dirname, 'about.html'),
+        gallery: resolve(__dirname, 'gallery.html'),
+        cakes: resolve(__dirname, 'cakes.html'),
+        flavors: resolve(__dirname, 'flavors.html'),
+        pricing: resolve(__dirname, 'pricing.html'),
+        cookies: resolve(__dirname, 'traditional-cookies.html'),
+        decoratedcookies: resolve(__dirname, 'decorated-cookies.html'),
+        macarons: resolve(__dirname, 'macarons.html'),
+        donuts: resolve(__dirname, 'donuts.html'),
+        pies: resolve(__dirname, 'pies.html'),
+        contact: resolve(__dirname, 'contact.html'),
       },
     },
   },
