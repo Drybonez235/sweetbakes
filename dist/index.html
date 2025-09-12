@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>sweetbakeschicago.com</title>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+  <!-- Your built Tailwind file -->
+  <link rel="stylesheet" crossorigin href="/assets/style-D_SVmHZH.css">
+</head>
+
+<body class="antialiased text-gray-800 bg-white">
+
+ <!-- NAV + HERO COMBINED -->
+<header class="bg-white shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Logo (centered) -->
+    <div class="flex justify-center py-6">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="sweet_bakes_logo.png" alt="Sweet Bakes Chicago"
+          class="h-96 w-auto object-contain" />
+      </a>
+    </div>
+
+    <!-- Centered navigation (desktop) -->
+    <nav class="hidden md:flex justify-center border-t pt-4 pb-4" aria-label="Main">
+      <ul class="flex gap-10 text-gray-700 items-center">
+        <li>
+          <a href="index.html"
+            class="px-2 py-1 rounded transition-colors duration-150
+                   text-gray-700 hover:bg-gray-100 hover:text-gray-900
+                   focus:bg-gray-100 focus:text-gray-900">Home</a>
+        </li>
+
+        <li>
+          <a href="about-us.html"
+            class="px-2 py-1 rounded transition-colors duration-150
+                   text-gray-700 hover:bg-gray-100 hover:text-gray-900
+                   focus:bg-gray-100 focus:text-gray-900">About Us</a>
+        </li>
+
+        <li>
+          <a href="gallery.html"
+            class="px-2 py-1 rounded transition-colors duration-150
+                   text-gray-700 hover:bg-gray-100 hover:text-gray-900
+                   focus:bg-gray-100 focus:text-gray-900">Gallery</a>
+        </li>
+
+        <!-- Products dropdown (outer group) -->
+        <li class="relative group/products">
+          <a href="cakes.html"
+            class="flex items-center gap-2 px-2 py-1 rounded transition-colors duration-150
+                   text-gray-700 hover:bg-gray-100 hover:text-gray-900
+                   focus:bg-gray-100 focus:text-gray-900"
+            aria-haspopup="true" aria-expanded="false">
+            Products
+            <svg class="w-4 h-4 text-current" viewBox="0 0 20 20"
+              fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06-.02L10 10.67l3.71-3.48a.75.75 0 111.04 1.08l-4.25 4a.75.75 0 01-1.06 0l-4.25-4a.75.75 0 01-.02-1.06z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+
+          <!-- Main dropdown: anchored to bottom of trigger (top-full) no gap -->
+          <div
+            class="invisible opacity-0 pointer-events-none
+                   group-hover/products:visible group-hover/products:opacity-100 group-hover/products:pointer-events-auto
+                   group-focus-within/products:visible group-focus-within/products:opacity-100
+                   group-focus-within/products:pointer-events-auto
+                   transition-opacity duration-150 absolute left-1/2 top-full
+                   transform -translate-x-1/2 w-48 bg-white border rounded-md
+                   shadow-lg py-2 z-30"
+            role="menu" aria-label="Products">
+
+            <!-- Cakes (wrapper group so submenu stays open when pointer moves) -->
+            <div class="relative group/cakes">
+              <a href="cakes.html"
+                class="block px-4 py-2 text-sm text-gray-700 transition-colors
+           duration-150 hover:bg-gray-100 hover:text-gray-900
+           focus:bg-gray-100 focus:text-gray-900" role="menuitem">
+                Cakes
+              </a>
+
+              <!-- Cakes submenu (appears to the right) -->
+              <div
+                class="invisible opacity-0 pointer-events-none
+           group-hover/cakes:visible group-hover/cakes:opacity-100
+           group-hover/cakes:pointer-events-auto
+           group-focus-within/cakes:visible group-focus-within/cakes:opacity-100
+                   group-focus-within/cakes:pointer-events-auto
+           transition-opacity duration-150 absolute left-full top-0
+           -ml-px w-44 bg-white border rounded-md shadow-md py-2 z-40"
+                role="menu" aria-label="Cakes">
+
+                <!-- submenu items -->
+                <a href="flavors.html"
+                  class="block px-4 py-2 text-sm text-gray-700 transition-colors
+                         duration-150 hover:bg-gray-100 hover:text-gray-900
+                         focus:bg-gray-100 focus:text-gray-900" role="menuitem">Flavors</a>
+                <a href="pricing.html"
+                  class="block px-4 py-2 text-sm text-gray-700 transition-colors
+                         duration-150 hover:bg-gray-100 hover:text-gray-900
+                         focus:bg-gray-100 focus:text-gray-900" role="menuitem">Pricing</a>
+
+              </div>
+            </div>
+
+            <!-- Cookies (wrapper group) -->
+            <div class="relative group/cookies">
+              <a href="traditional-cookies.html"
+                class="block px-4 py-2 text-sm text-gray-700 transition-colors
+           duration-150 hover:bg-gray-100 hover:text-gray-900
+           focus:bg-gray-100 focus:text-gray-900" role="menuitem">
+                Cookies
+              </a>
+
+              <!-- Cookies submenu (appears to the right) -->
+              <div
+                class="invisible opacity-0 pointer-events-none
+           group-hover/cookies:visible group-hover/cookies:opacity-100
+           group-hover/cookies:pointer-events-auto
+           group-focus-within/cookies:visible group-focus-within/cookies:opacity-100
+                   group-focus-within/cakes:pointer-events-auto
+           transition-opacity duration-150 absolute left-full top-0
+           -ml-px w-44 bg-white border rounded-md shadow-md py-2 z-40"
+                role="menu" aria-label="Cookies">
+                <a href="traditional-cookies.html"
+                  class="block px-4 py-2 text-sm text-gray-700 transition-colors
+             duration-150 hover:bg-gray-100 hover:text-gray-900
+             focus:bg-gray-100 focus:text-gray-900" role="menuitem">
+                  Traditional Cookies
+                </a>
+                <a href="decorated-cookies.html"
+                  class="block px-4 py-2 text-sm text-gray-700 transition-colors
+             duration-150 hover:bg-gray-100 hover:text-gray-900
+             focus:bg-gray-100 focus:text-gray-900" role="menuitem">
+                  Decorated Cookies
+                </a>
+                <a href="macarons.html"
+                  class="block px-4 py-2 text-sm text-gray-700 transition-colors
+             duration-150 hover:bg-gray-100 hover:text-gray-900
+             focus:bg-gray-100 focus:text-gray-900" role="menuitem">
+                  Macarons
+                </a>
+              </div>
+            </div>
+
+            <!-- Donuts -->
+            <a href="donuts.html"
+              class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-150
+                     hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100
+                     focus:text-gray-900" role="menuitem">Donuts</a>
+
+            <!-- Pies -->
+            <a href="pies.html"
+              class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-150
+                     hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100
+                     focus:text-gray-900" role="menuitem">Pies</a>
+          </div>
+        </li>
+
+        <li>
+          <a href="contact.html"
+            class="px-2 py-1 rounded transition-colors duration-150
+                   text-gray-700 hover:bg-gray-100 hover:text-gray-900
+                   focus:bg-gray-100 focus:text-gray-900">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile nav toggle -->
+<div class="md:hidden border-t">
+  <div class="px-4 py-3 flex items-center justify-between">
+    <div class="text-gray-700 font-medium">Menu</div>
+    <button id="mobileToggle" aria-controls="mobileMenu" aria-expanded="false"
+      class="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none
+                   focus:ring-2 focus:ring-rose-300">
+      <span class="sr-only">Open menu</span>
+      <svg id="iconOpen" class="w-6 h-6" fill="none" stroke="currentColor"
+        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+      <svg id="iconClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor"
+        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile stacked links -->
+  <nav id="mobileMenu" class="px-4 pb-4 hidden" aria-label="Mobile menu">
+    <a href="index.html" class="block px-2 py-2 rounded text-gray-700 hover:bg-gray-50">Home</a>
+    <a href="about-us.html" class="block px-2 py-2 rounded text-gray-700 hover:bg-gray-50">About Us</a>
+    <a href="gallery.html" class="block px-2 py-2 rounded text-gray-700 hover:bg-gray-50">Gallery</a>
+
+    <div class="mt-2 border-t pt-2">
+      <div class="text-sm text-gray-500 px-2 pb-1">Products</div>
+
+      <!-- List all product pages for mobile -->
+      <a href="cakes.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Cakes</a>
+      <a href="flavors.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Cake Flavors</a>
+      <a href="pricing.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Cake Pricing</a>
+
+      <a href="traditional-cookies.html"
+        class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Traditional
+        Cookies</a>
+      <a href="decorated-cookies.html"
+        class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Decorated
+        Cookies</a>
+      <a href="macarons.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Macarons</a>
+
+      <a href="donuts.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Donuts</a>
+      <a href="pies.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Pies</a>
+    </div>
+
+    <a href="contact.html" class="block mt-2 px-2 py-2 rounded text-gray-700 hover:bg-gray-50">Contact</a>
+  </nav>
+</div> 
+
+  <!-- FULL-WIDTH HERO IMAGE -->
+  <section class="w-full">
+    <div class="w-full h-64 md:h-96 bg-gray-100">
+      <img src="halloween_hero.png" alt="Hero - Sweet Bakes Chicago" class="object-cover w-full h-full" />
+    </div>
+  </section>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Order CTA -->
+    <section class="text-center">
+      <h2 class="text-2xl md:text-3xl font-semibold">Order your nut free treats today!</h2>
+      <div class="mt-6 flex justify-center">
+        <img src="be_allergy_safe_pumpkin.jpg" alt="Nut free treats"
+          class="w-48 h-48 object-cover rounded-lg shadow-sm" />
+      </div>
+    </section>
+
+    <!-- Fall treat ideas -->
+    <section class="mt-12 text-2xl">
+      <h3 class="text-6xl font-bold mb-6 text-center" style="font-family: 'Creepster', cursive; color:#D9480F;">
+        fall treat ideas
+      </h3> <!-- Grid: 3 cols x 2 rows on large screens -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="bg-white border rounded-lg overflow-hidden shadow-sm flex flex-col">
+          <div class="h-40 bg-gray-100">
+            <img src="jack-o-lantern-cupcakes.webp" alt="Pumpkin Cupcakes" class="object-cover w-full h-full" />
+          </div>
+          <div class="p-4 mt-auto">
+            <h4 class="font-bold" style="font-family: 'Creepster', cursive; color:#F97316;">
+              Cupcakes
+            </h4>
+            <p class="font-extrabold mt-2 text-lg" style="color:#6D28D9;">Starting @ $35 a dozen</p>
+          </div>
+        </article>
+
+        <article class="bg-white border rounded-lg overflow-hidden shadow-sm flex flex-col">
+          <div class="h-40 bg-gray-100">
+            <img src="gengerbreak_skelotons.jpeg" alt="Skeloton Cookie" class="object-cover w-full h-full" />
+          </div>
+          <div class="p-4 mt-auto">
+            <h4 class="font-bold" style="font-family: 'Creepster', cursive; color:#F97316;">
+              Cookies
+            </h4>
+            <p class="font-extrabold mt-2 text-lg" style="color:#6D28D9;">Starting @ $34 a dozen</p>
+          </div>
+        </article>
+
+        <article class="bg-white border rounded-lg overflow-hidden shadow-sm flex flex-col">
+          <div class="h-40 bg-gray-100">
+            <img src="halloween_donuts.jpg" alt="Caramel Apple Tart" class="object-cover w-full h-full" />
+          </div>
+          <div class="p-4 mt-auto">
+            <h4 class="font-bold" style="font-family: 'Creepster', cursive; color:#F97316;">
+              Donuts</h4>
+            <p class="font-extrabold mt-2 text-lg" style="color:#6D28D9;">Starting @ $30 a dozen</p>
+          </div>
+        </article>
+
+        <article class="bg-white border rounded-lg overflow-hidden shadow-sm flex flex-col">
+          <div class="h-40 bg-gray-100">
+            <img src="pretzel_pie.jpg" alt="Pretzel Pie" class="object-cover w-full h-full" />
+          </div>
+          <div class="p-4 mt-auto">
+            <h4 class="font-bold" style="font-family: 'Creepster', cursive; color:#F97316;">
+              Pies
+            </h4>
+            <p class="font-extrabold mt-2 text-lg" style="color:#6D28D9;">Starting @ $27 a dozen</p>
+          </div>
+        </article>
+
+        <article class="bg-white border rounded-lg overflow-hidden shadow-sm flex flex-col">
+          <div class="h-40 bg-gray-100">
+            <img src="carmal_cake.jpg" alt="White carmel cake" class="object-cover w-full h-full" />
+          </div>
+          <div class="p-4 mt-auto">
+            <h4 class="font-bold" style="font-family: 'Creepster', cursive; color:#F97316;">
+              Cake
+            </h4>
+            <p class="font-extrabold mt-2 text-lg" style="color:#6D28D9;">Starting at $35</p>
+          </div>
+        </article>
+
+        <article class="bg-white border rounded-lg overflow-hidden shadow-sm flex flex-col">
+          <div class="h-40 bg-gray-100">
+            <img src="halloween_macaroons.jpg" alt="Pear & Honey Tart" class="object-cover w-full h-full" />
+          </div>
+          <div class="p-4 mt-auto">
+            <h4 class="font-bold" style="font-family: 'Creepster', cursive; color:#F97316;">
+              Macarons
+            </h4>
+            <p class="font-extrabold mt-2 text-lg" style="color:#6D28D9;">Starting @ $40 a dozen</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+
+   <!-- Footer -->
+    <footer class="bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h4 class="text-lg font-semibold">Sweet Bakes Chicago</h4>
+            <nav class="mt-4 space-y-2">
+              <a href="/about.html" class="block text-teal-700 hover:text-teal-500">About Us</a>
+              <a href="/contact.html" class="block text-teal-700 hover:text-teal-500">Contact</a>
+              <a href="https://www.facebook.com/sweetbakeschicago" target="_blank" rel="noopener"
+                class="block text-teal-700 hover:text-teal-500">Facebook</a>
+            </nav>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold">WHAT OUR CUSTOMERS HAVE TO SAY</h4>
+            <div class="mt-4 bg-white border rounded-lg p-4 shadow-sm">
+              <blockquote class="text-sm text-gray-700 italic">"Sara's cakes are beautiful and delicious. She is reliable and kind. My husband and I saved our top layer to eat on our anniversary, but he has had to persuade me more than once to not eat it early."</blockquote>
+              <p class="mt-3 text-xs text-gray-500">— Jane Morris</p>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold">Get in touch</h4>
+            <address class="not-italic mt-4 text-gray-700 text-sm space-y-2">
+              <div>Chicago IL</div>
+              <div>Phone: <a href="tel:+7738700026" class="text-amber-800  hover:underline">+1 (773) 870-0026</a></div>
+              <div>Email: <a href="mailto:hello@sweetbakeschicago.com"
+                  class="text-amber-800 hover:underline">sweetbakeschicago@gmail.com</a></div>
+            </address>
+            <div class="mt-6">
+              <a href="/contact.html"
+                class="inline-block bg-orange-200  text-grey-400 px-4 py-2 rounded hover:bg-orange-100">Contact Us</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-xs text-gray-400 text-center">
+          © <span id="year"></span> Sweet Bakes Chicago. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Small JS: mobile toggle and year -->
+    <script>
+      (function () {
+        // footer year
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        // mobile menu toggle
+        const toggle = document.getElementById('mobileToggle');
+        const menu = document.getElementById('mobileMenu');
+        const iconOpen = document.getElementById('iconOpen');
+        const iconClose = document.getElementById('iconClose');
+
+        if (toggle && menu) {
+          toggle.addEventListener('click', function () {
+            const isHidden = menu.classList.toggle('hidden');
+            // update aria-expanded to reflect visibility
+            toggle.setAttribute('aria-expanded', String(!isHidden));
+            iconOpen.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+          });
+        }
+      })();
+    </script>
+</body>
+
+</html>

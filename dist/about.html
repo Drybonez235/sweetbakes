@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Us — Sweet Bakes Chicago</title>
+
+  <!-- Your built Tailwind file -->
+
+  <!-- Optional spooky display font used elsewhere (remove if not wanted) -->
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+  <style>
+    .spooky { font-family: 'Creepster', cursive; }
+  </style>
+  <link rel="stylesheet" crossorigin href="/assets/style-D_SVmHZH.css">
+</head>
+<body class="antialiased text-gray-800 bg-white">
+
+  <!-- HEADER: centered large logo + centered nav -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Logo (centered, larger) -->
+      <div class="flex justify-center py-6">
+        <a href="/" class="flex items-center gap-3">
+          <img src="/assets/sweet_bakes_logo-BG1b9R3m.png" alt="Sweet Bakes Chicago"
+               class="h-20 w-auto object-contain" />
+        </a>
+      </div>
+
+      <!-- Centered navigation (desktop) -->
+      <nav class="hidden md:flex justify-center border-t pt-4">
+        <ul class="flex gap-10 text-gray-700">
+          <li><a href="/" class="hover:text-rose-600">Home</a></li>
+          <li><a href="/about-us.html" class="hover:text-rose-600 font-semibold">About Us</a></li>
+          <li><a href="/gallery.html" class="hover:text-rose-600">Gallery</a></li>
+
+          <li class="relative group">
+            <button class="flex items-center gap-2 hover:text-rose-600 focus:outline-none"
+                    aria-haspopup="true" aria-expanded="false">
+              Products
+              <svg class="w-4 h-4 text-current" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06-.02L10 10.67l3.71-3.48a.75.75 0 111.04 1.08l-4.25 4a.75.75 0 01-1.06 0l-4.25-4a.75.75 0 01-.02-1.06z"
+                      clip-rule="evenodd" />
+              </svg>
+            </button>
+
+            <div
+              class="invisible opacity-0 pointer-events-none group-hover:visible group-hover:opacity-100
+                     group-focus-within:visible group-focus-within:opacity-100 transition-opacity duration-150
+                     absolute left-1/2 transform -translate-x-1/2 mt-3 w-44 bg-white border rounded-md shadow-lg py-2 z-30">
+              <a href="/products/cupcakes.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Cupcakes</a>
+              <a href="/products/cookies.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Cookies</a>
+              <a href="/products/cakes.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Cakes</a>
+            </div>
+          </li>
+
+          <li><a href="/contact.html" class="hover:text-rose-600">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile nav toggle -->
+      <div class="md:hidden border-t">
+        <div class="px-4 py-3 flex items-center justify-between">
+          <div class="text-gray-700 font-medium">Menu</div>
+          <button id="mobileToggle" aria-controls="mobileMenu" aria-expanded="false"
+                  class="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-rose-300">
+            <span class="sr-only">Open menu</span>
+            <svg id="iconOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round"
+                 stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <svg id="iconClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round"
+                 stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+        <!-- Mobile stacked links -->
+        <nav id="mobileMenu" class="px-4 pb-4 hidden">
+          <a href="/" class="block px-2 py-2 rounded text-gray-700 hover:bg-gray-50">Home</a>
+          <a href="/about-us.html" class="block px-2 py-2 rounded text-gray-700 hover:bg-gray-50 font-semibold">About Us</a>
+          <a href="/gallery.html" class="block px-2 py-2 rounded text-gray-700 hover:bg-gray-50">Gallery</a>
+
+          <div class="mt-2 border-t pt-2">
+            <div class="text-sm text-gray-500 px-2 pb-1">Products</div>
+            <a href="/products/cupcakes.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Cupcakes</a>
+            <a href="/products/cookies.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Cookies</a>
+            <a href="/products/cakes.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Cakes</a>
+          </div>
+
+          <a href="/contact.html" class="block mt-2 px-2 py-2 rounded text-gray-700 hover:bg-gray-50">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO / INTRO -->
+  <section class="w-full">
+    <div class="w-full h-48 md:h-64 bg-gray-100">
+      <img src="/assets/halloween_hero-B8tygcFM.png" alt="Sweet Bakes Chicago hero"
+           class="object-cover w-full h-full" />
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-10">
+    <!-- Nut-free notice -->
+    <section class="prose prose-lg">
+      <h1 class="text-3xl font-semibold">We Are A 100% Nut Free Facility!</h1>
+      <p>
+        Sweet Bakes Chicago LLC is a cottage bakery located on the northwest side of Chicago. We
+        currently serve the northwest city and neighboring suburbs.
+      </p>
+
+      <p>
+        Enjoying treats with food allergies can be a challenge.
+        <strong>Sweet Bakes Chicago is a Tree Nut and Peanut FREE Facility.</strong>
+        We take very special care to be sure that all of our ingredients are not only free of all
+        nuts but also not processed in a facility that also processes nuts.
+      </p>
+
+      <p>
+        We also have gluten, dairy, and sugar free options available for select products. Please
+        contact us with any questions — we want to help.
+      </p>
+
+      <p class="text-sm text-gray-600">
+        Our products are produced in a home kitchen that is not inspected by a health department and
+        that may also process common food allergens. If you have safety concerns, contact your local
+        health department. Our facility may contain wheat, milk, soy, egg, and shellfish.
+      </p>
+    </section>
+
+    <!-- About Me -->
+   <section class="bg-white border rounded-lg p-6 shadow-sm">
+  <div class="prose max-w-none text-gray-800">
+    <!-- Left-floating image (mobile: centered above text) -->
+    <img
+      src="/sara.jpg"
+      alt="Sara Williams demure"
+      class="w-40 h-40 object-cover rounded-lg shadow-sm mb-4 block md:float-left md:mr-6 md:mb-2 mx-auto md:mx-0"
+    />
+    <h2 class="text-2xl font-semibold">About Me</h2>
+
+<p class="mt-3">
+  My name is Sara Williams. I have been baking and decorating treats for over 20 years. I have
+  taken classes with Collette Peters of the Food Network, as well as multiple online classes
+  taught by world renowned decorators and pastry chefs. I first started decorating in high
+  school just to pass time in the summer and quickly grew to love it.
+</p>
+
+<p class="mt-3">
+  I am married and have two children, so I’m currently working out of my home in order to spend
+  more time with my family. In 2015, my daughter was diagnosed with a tree nut allergy after
+  having a bad reaction to a pistachio. I quickly realized the need for safe and delicious
+  treats and made Sweet Bakes Chicago a nut free bakery. As the business grows, and my kids get
+  older, I want to expand into a shop outside of my home.
+</p>
+
+<!-- Right-floating image near the end of the bio (mobile: centered) -->
+<img
+  src="/williams_family_roadtrip.jpg"
+  alt="Williams Family at the park smiling"
+  class="w-40 h-40 object-cover rounded-lg shadow-sm mt-4 block md:float-right md:ml-6 md:mt-2 mx-auto md:mx-0"
+/>
+
+<p class="mt-3">
+  We specialize in cakes, cookies, donuts, pies and custom event treats. We carefully select
+  ingredients that are free from nuts and sourced from nut-free manufacturers whenever possible.
+  If you have specific dietary concerns (gluten, dairy, sugar), please let us know — we offer
+  select options and will always work with you to create something safe and delicious.
+</p>
+
+<p class="mt-3">
+  Our products are produced in a home kitchen that is not inspected by a health department and
+  that may also process common food allergens. If you have safety concerns, contact your local
+  health department. Our facility may contain wheat, milk, soy, egg, and shellfish.
+</p>
+
+<!-- Clear floats before the image row -->
+<div class="clear-both"></div>
+
+<!-- 3-up image row -->
+<div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+  <img src="/williams_children_red_bush.jpg" alt="Custom cake example" class="h-full w-auto object-cover rounded-lg shadow-sm" />
+  <img src="/assets/williams_family_at_park-BIX5ydst.jpg" alt="Decorated cookies example" class="h-full w-auto object-cover rounded-lg shadow-sm" />
+  <img src="/assets/Dlux_and_sara_beach-B_ORIWbA.jpg" alt="Cupcakes example" class=" h-autow-auto rounded-lg shadow-sm" />
+</div>
+</div>
+</section>
+
+    <!-- What we make / call to action -->
+    <section class="bg-rose-50 border rounded-lg p-6">
+      <h3 class="text-xl font-semibold">Cakes, Cookies, Donuts, Pies & More</h3>
+      <p class="mt-3">
+        Sweet Bakes Chicago makes treats for all occasions. Please take a look through our portfolio
+        to see what we've done and what we can do, or let us design custom treats for you.
+        The possibilities are endless!
+      </p>
+
+      <div class="mt-6">
+        <a href="/gallery.html" class="inline-block bg-rose-600 text-white px-4 py-2 rounded hover:bg-rose-700">View Gallery</a>
+        <a href="/contact.html" class="ml-3 inline-block border border-rose-600 text-rose-600 px-4 py-2 rounded hover:bg-rose-50">Contact / Order</a>
+      </div>
+    </section>
+
+    <!-- Quick links (flavors/pricing) -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <a href="/flavors.html" class="block p-4 border rounded-lg hover:shadow">
+        <h4 class="font-semibold">Flavors</h4>
+        <p class="mt-2 text-sm text-gray-600">See our available signature flavors and seasonal options.</p>
+      </a>
+      <a href="/pricing.html" class="block p-4 border rounded-lg hover:shadow">
+        <h4 class="font-semibold">Pricing</h4>
+        <p class="mt-2 text-sm text-gray-600">Layer cake and custom treat pricing and details.</p>
+      </a>
+    </section>
+  </main>
+
+  <!-- Footer (same structure as homepage) -->
+  <footer class="bg-gray-50 border-t">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h4 class="text-lg font-semibold">Sweet Bakes Chicago</h4>
+          <nav class="mt-4 space-y-2">
+            <a href="/about-us.html" class="block text-gray-700 hover:text-rose-600">About Us</a>
+            <a href="/contact.html" class="block text-gray-700 hover:text-rose-600">Contact</a>
+            <a href="https://facebook.com/" target="_blank" rel="noopener" class="block text-gray-700 hover:text-rose-600">Facebook</a>
+          </nav>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold">what our customers have to say</h4>
+          <div class="mt-4 bg-white border rounded-lg p-4 shadow-sm">
+            <blockquote class="text-sm text-gray-700 italic">"Absolutely love the nut-free cupcakes — so moist and flavorful.
+              The staff was friendly and delivery was on time. Highly recommend!"</blockquote>
+            <p class="mt-3 text-xs text-gray-500">— Emily R., Chicago</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold">Get in touch</h4>
+          <address class="not-italic mt-4 text-gray-700 text-sm space-y-2">
+            <div>123 Baker St, Chicago, IL</div>
+            <div>Phone: <a href="tel:+17738700026" class="text-rose-600 hover:underline">773-870-0026</a></div>
+            <div>Email: <a href="mailto:hello@sweetbakeschicago.com" class="text-rose-600 hover:underline">hello@sweetbakeschicago.com</a></div>
+          </address>
+          <div class="mt-6">
+            <a href="/contact.html" class="inline-block bg-rose-600 text-white px-4 py-2 rounded hover:bg-rose-700">Contact Us</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 text-xs text-gray-400 text-center">
+        © <span id="year"></span> Sweet Bakes Chicago. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // footer year and mobile menu toggle
+    (function () {
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      const toggle = document.getElementById('mobileToggle');
+      const menu = document.getElementById('mobileMenu');
+      const iconOpen = document.getElementById('iconOpen');
+      const iconClose = document.getElementById('iconClose');
+
+      if (toggle && menu) {
+        toggle.addEventListener('click', function () {
+          const hidden = menu.classList.toggle('hidden');
+          toggle.setAttribute('aria-expanded', String(!hidden));
+          iconOpen.classList.toggle('hidden');
+          iconClose.classList.toggle('hidden');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
