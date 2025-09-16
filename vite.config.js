@@ -24,6 +24,7 @@ export default defineConfig({
         donuts: resolve(__dirname, 'donuts.html'),
         pies: resolve(__dirname, 'pies.html'),
         contact: resolve(__dirname, 'contact.html'),
+        theme: resolve(__dirname, 'theme.html'),
       },
     },
   },

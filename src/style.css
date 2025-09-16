@@ -1,1 +1,35 @@
 @import "tailwindcss";
+/* 
+   The @theme block is where you define your CSS variables.
+   These variables will then be referenced in tailwind.config.js.
+   Vite/PostCSS will correctly process this.
+*/
+@theme {
+  /* Colors */
+  --color-brand-cream: #FDF9ED;
+  --color-brand-brown: #7E5B4B;
+  --color-brand-teal: #81C7BE;
+  --color-brand-light-cream: #FCFBF8; /* <-- ADD THIS LINE */
+  --color-brand-terracotta: #BA644A;
+  --color-brand-grey-green: #A3B5AE;
+  --color-brand-dark-brown: #4B3B32;
+
+  /* Font Families */
+  --font-heading: 'Merriweather', serif;
+  --font-body: 'Nunito Sans', sans-serif;
+}
+
+/* Apply global base styles that directly use our CSS variables */
+body {
+  font-family: var(--font-body); /* Using the CSS variable */
+  color: var(--color-brand-dark-brown); /* Using the CSS variable */
+  background-color: var(--color-brand-cream); /* Using the CSS variable */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Apply default heading styles that directly use our CSS variables */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading); /* Using the CSS variable */
+  color: var(--color-brand-brown); /* Using the CSS variable */
+}

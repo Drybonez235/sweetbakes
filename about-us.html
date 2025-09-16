@@ -16,47 +16,106 @@
 </head>
 <body class="antialiased text-gray-800 bg-white">
 
- <!-- NAV + HERO COMBINED -->
+<!-- Theme-aware nav CSS (place in your main CSS or in a <style> block) -->
+<style>
+  /* Use your existing CSS variables (defined in @theme) */
+  .nav-link {
+    color: var(--color-brand-dark-brown);
+    border-radius: 0.375rem; /* matches Tailwind rounded */
+    transition: color 150ms, background-color 150ms, box-shadow 150ms;
+  }
+
+  .nav-link:hover {
+    /* subtle hover background and slightly warmer text */
+    background-color: rgba(0, 0, 0, 0.04);
+    color: var(--color-brand-brown);
+  }
+
+  .nav-link:focus {
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.06);
+    color: var(--color-brand-brown);
+    box-shadow: 0 0 0 4px rgba(129, 199, 190, 0.18); /* brand teal focus */
+  }
+
+  /* Borders using theme gray-green */
+  .border-theme {
+    border-color: var(--color-brand-grey-green);
+  }
+
+  /* Dropdown containers - keep white but use theme border */
+  .dropdown-panel {
+    background-color: white;
+    border-color: var(--color-brand-grey-green);
+  }
+
+  /* Submenu items (inherit nav-link styles) */
+  .submenu-item {
+    color: var(--color-brand-dark-brown);
+  }
+  .submenu-item:hover,
+  .submenu-item:focus {
+    color: var(--color-brand-brown);
+  }
+
+  /* Mobile toggle focus style (replaces Tailwind focus:ring-* utility) */
+  #mobileToggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(129, 199, 190, 0.18);
+    border-radius: 0.375rem;
+  }
+
+  /* Logo sizing (adjust as needed) */
+  .site-logo {
+    height: 6rem; /* h-24 equivalent */
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* Ensure the top borders on sections use theme color */
+  header,
+  .md\\:hidden.border-t,
+  .mt-2.border-t {
+    border-top-color: var(--color-brand-grey-green);
+  }
+</style>
+
+<!-- NAV + HERO COMBINED -->
 <header class="bg-white shadow-sm">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Logo (centered) -->
     <div class="flex justify-center py-6">
       <a href="index.html" class="flex items-center gap-3">
         <img src="/public/sweet_bakes_logo.png" alt="Sweet Bakes Chicago"
-          class="h-96 w-auto object-contain" />
+          class="site-logo" />
       </a>
     </div>
 
     <!-- Centered navigation (desktop) -->
-    <nav class="hidden md:flex justify-center border-t pt-4 pb-4" aria-label="Main">
-      <ul class="flex gap-10 text-gray-700 items-center">
+    <nav class="hidden md:flex justify-center border-t pt-4 pb-4 border-theme" aria-label="Main">
+      <ul class="flex gap-10 items-center">
         <li>
           <a href="index.html"
-            class="px-2 py-1 rounded transition-colors duration-150
-                   text-gray-700 hover:bg-gray-100 hover:text-gray-900
-                   focus:bg-gray-100 focus:text-gray-900">Home</a>
+            class="px-2 py-1 nav-link"
+            >Home</a>
         </li>
 
         <li>
           <a href="about-us.html"
-            class="px-2 py-1 rounded transition-colors duration-150
-                   text-gray-700 hover:bg-gray-100 hover:text-gray-900
-                   focus:bg-gray-100 focus:text-gray-900">About Us</a>
+            class="px-2 py-1 nav-link"
+            >About Us</a>
         </li>
 
         <li>
           <a href="gallery.html"
-            class="px-2 py-1 rounded transition-colors duration-150
-                   text-gray-700 hover:bg-gray-100 hover:text-gray-900
-                   focus:bg-gray-100 focus:text-gray-900">Gallery</a>
+            class="px-2 py-1 nav-link"
+            >Gallery</a>
         </li>
 
         <!-- Products dropdown (outer group) -->
         <li class="relative group/products">
           <a href="cakes.html"
-            class="flex items-center gap-2 px-2 py-1 rounded transition-colors duration-150
-                   text-gray-700 hover:bg-gray-100 hover:text-gray-900
-                   focus:bg-gray-100 focus:text-gray-900"
+            class="flex items-center gap-2 px-2 py-1 nav-link"
             aria-haspopup="true" aria-expanded="false">
             Products
             <svg class="w-4 h-4 text-current" viewBox="0 0 20 20"
@@ -74,16 +133,15 @@
                    group-focus-within/products:visible group-focus-within/products:opacity-100
                    group-focus-within/products:pointer-events-auto
                    transition-opacity duration-150 absolute left-1/2 top-full
-                   transform -translate-x-1/2 w-48 bg-white border rounded-md
+                   transform -translate-x-1/2 w-48 dropdown-panel border rounded-md
                    shadow-lg py-2 z-30"
             role="menu" aria-label="Products">
 
             <!-- Cakes (wrapper group so submenu stays open when pointer moves) -->
             <div class="relative group/cakes">
               <a href="cakes.html"
-                class="block px-4 py-2 text-sm text-gray-700 transition-colors
-           duration-150 hover:bg-gray-100 hover:text-gray-900
-           focus:bg-gray-100 focus:text-gray-900" role="menuitem">
+                class="block px-4 py-2 text-sm nav-link"
+                role="menuitem">
                 Cakes
               </a>
 
@@ -95,18 +153,16 @@
            group-focus-within/cakes:visible group-focus-within/cakes:opacity-100
                    group-focus-within/cakes:pointer-events-auto
            transition-opacity duration-150 absolute left-full top-0
-           -ml-px w-44 bg-white border rounded-md shadow-md py-2 z-40"
+           -ml-px w-44 bg-white border rounded-md shadow-md py-2 z-40 dropdown-panel"
                 role="menu" aria-label="Cakes">
 
                 <!-- submenu items -->
                 <a href="flavors.html"
-                  class="block px-4 py-2 text-sm text-gray-700 transition-colors
-                         duration-150 hover:bg-gray-100 hover:text-gray-900
-                         focus:bg-gray-100 focus:text-gray-900" role="menuitem">Flavors</a>
+                  class="block px-4 py-2 text-sm submenu-item nav-link"
+                  role="menuitem">Flavors</a>
                 <a href="pricing.html"
-                  class="block px-4 py-2 text-sm text-gray-700 transition-colors
-                         duration-150 hover:bg-gray-100 hover:text-gray-900
-                         focus:bg-gray-100 focus:text-gray-900" role="menuitem">Pricing</a>
+                  class="block px-4 py-2 text-sm submenu-item nav-link"
+                  role="menuitem">Pricing</a>
 
               </div>
             </div>
@@ -114,9 +170,7 @@
             <!-- Cookies (wrapper group) -->
             <div class="relative group/cookies">
               <a href="traditional-cookies.html"
-                class="block px-4 py-2 text-sm text-gray-700 transition-colors
-           duration-150 hover:bg-gray-100 hover:text-gray-900
-           focus:bg-gray-100 focus:text-gray-900" role="menuitem">
+                class="block px-4 py-2 text-sm nav-link" role="menuitem">
                 Cookies
               </a>
 
@@ -128,24 +182,18 @@
            group-focus-within/cookies:visible group-focus-within/cookies:opacity-100
                    group-focus-within/cakes:pointer-events-auto
            transition-opacity duration-150 absolute left-full top-0
-           -ml-px w-44 bg-white border rounded-md shadow-md py-2 z-40"
+           -ml-px w-44 bg-white border rounded-md shadow-md py-2 z-40 dropdown-panel"
                 role="menu" aria-label="Cookies">
                 <a href="traditional-cookies.html"
-                  class="block px-4 py-2 text-sm text-gray-700 transition-colors
-             duration-150 hover:bg-gray-100 hover:text-gray-900
-             focus:bg-gray-100 focus:text-gray-900" role="menuitem">
+                  class="block px-4 py-2 text-sm submenu-item nav-link" role="menuitem">
                   Traditional Cookies
                 </a>
                 <a href="decorated-cookies.html"
-                  class="block px-4 py-2 text-sm text-gray-700 transition-colors
-             duration-150 hover:bg-gray-100 hover:text-gray-900
-             focus:bg-gray-100 focus:text-gray-900" role="menuitem">
+                  class="block px-4 py-2 text-sm submenu-item nav-link" role="menuitem">
                   Decorated Cookies
                 </a>
                 <a href="macarons.html"
-                  class="block px-4 py-2 text-sm text-gray-700 transition-colors
-             duration-150 hover:bg-gray-100 hover:text-gray-900
-             focus:bg-gray-100 focus:text-gray-900" role="menuitem">
+                  class="block px-4 py-2 text-sm submenu-item nav-link" role="menuitem">
                   Macarons
                 </a>
               </div>
@@ -153,23 +201,17 @@
 
             <!-- Donuts -->
             <a href="donuts.html"
-              class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-150
-                     hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100
-                     focus:text-gray-900" role="menuitem">Donuts</a>
+              class="block px-4 py-2 text-sm nav-link" role="menuitem">Donuts</a>
 
             <!-- Pies -->
             <a href="pies.html"
-              class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-150
-                     hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100
-                     focus:text-gray-900" role="menuitem">Pies</a>
+              class="block px-4 py-2 text-sm nav-link" role="menuitem">Pies</a>
           </div>
         </li>
 
         <li>
           <a href="contact.html"
-            class="px-2 py-1 rounded transition-colors duration-150
-                   text-gray-700 hover:bg-gray-100 hover:text-gray-900
-                   focus:bg-gray-100 focus:text-gray-900">Contact</a>
+            class="px-2 py-1 nav-link">Contact</a>
         </li>
       </ul>
     </nav>
@@ -177,12 +219,12 @@
 </header>
 
 <!-- Mobile nav toggle -->
-<div class="md:hidden border-t">
+<div class="md:hidden border-t border-theme">
   <div class="px-4 py-3 flex items-center justify-between">
-    <div class="text-gray-700 font-medium">Menu</div>
+    <div class="text-gray-700 font-medium" style="color:var(--color-brand-dark-brown)">Menu</div>
     <button id="mobileToggle" aria-controls="mobileMenu" aria-expanded="false"
-      class="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none
-                   focus:ring-2 focus:ring-rose-300">
+      class="p-2 rounded-md text-gray-700 mobile-toggle"
+      style="color:var(--color-brand-dark-brown)">
       <span class="sr-only">Open menu</span>
       <svg id="iconOpen" class="w-6 h-6" fill="none" stroke="currentColor"
         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -199,34 +241,31 @@
 
   <!-- Mobile stacked links -->
   <nav id="mobileMenu" class="px-4 pb-4 hidden" aria-label="Mobile menu">
-    <a href="index.html" class="block px-2 py-2 rounded text-gray-700 hover:bg-gray-50">Home</a>
-    <a href="about-us.html" class="block px-2 py-2 rounded text-gray-700 hover:bg-gray-50">About Us</a>
-    <a href="gallery.html" class="block px-2 py-2 rounded text-gray-700 hover:bg-gray-50">Gallery</a>
+    <a href="index.html" class="block px-2 py-2 rounded nav-link">Home</a>
+    <a href="about-us.html" class="block px-2 py-2 rounded nav-link">About Us</a>
+    <a href="gallery.html" class="block px-2 py-2 rounded nav-link">Gallery</a>
 
-    <div class="mt-2 border-t pt-2">
-      <div class="text-sm text-gray-500 px-2 pb-1">Products</div>
+    <div class="mt-2 border-t pt-2 border-theme">
+      <div class="text-sm" style="color:var(--color-brand-grey-green); padding-left:0.5rem; padding-bottom:0.25rem;">Products</div>
 
       <!-- List all product pages for mobile -->
-      <a href="cakes.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Cakes</a>
-      <a href="flavors.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Cake Flavors</a>
-      <a href="pricing.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Cake Pricing</a>
+      <a href="cakes.html" class="block px-4 py-2 rounded nav-link">Cakes</a>
+      <a href="flavors.html" class="block px-4 py-2 rounded nav-link">Cake Flavors</a>
+      <a href="pricing.html" class="block px-4 py-2 rounded nav-link">Cake Pricing</a>
 
       <a href="traditional-cookies.html"
-        class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Traditional
-        Cookies</a>
+        class="block px-4 py-2 rounded nav-link">Traditional Cookies</a>
       <a href="decorated-cookies.html"
-        class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Decorated
-        Cookies</a>
-      <a href="macarons.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Macarons</a>
+        class="block px-4 py-2 rounded nav-link">Decorated Cookies</a>
+      <a href="macarons.html" class="block px-4 py-2 rounded nav-link">Macarons</a>
 
-      <a href="donuts.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Donuts</a>
-      <a href="pies.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Pies</a>
+      <a href="donuts.html" class="block px-4 py-2 rounded nav-link">Donuts</a>
+      <a href="pies.html" class="block px-4 py-2 rounded nav-link">Pies</a>
     </div>
 
-    <a href="contact.html" class="block mt-2 px-2 py-2 rounded text-gray-700 hover:bg-gray-50">Contact</a>
+    <a href="contact.html" class="block mt-2 px-2 py-2 rounded nav-link">Contact</a>
   </nav>
-</div> 
-
+</div>
   <!-- FULL-WIDTH HERO IMAGE -->
   <section class="w-full">
     <div class="w-full h-64 md:h-96 bg-gray-100">
@@ -314,9 +353,9 @@
 
 <!-- 3-up image row -->
 <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
-  <img src="/williams_children_red_bush.jpg" alt="Custom cake example" class="h-full w-auto object-cover rounded-lg shadow-sm" />
-  <img src="public/williams_family_at_park.jpg" alt="Decorated cookies example" class="h-full w-auto object-cover rounded-lg shadow-sm" />
-  <img src="/public/Dlux_and_sara_beach.jpg" alt="Cupcakes example" class=" h-autow-auto rounded-lg shadow-sm" />
+  <img src="williams_children_red_bush.jpg" alt="Custom cake example" class="h-full w-auto object-cover rounded-lg shadow-sm" />
+  <img src="williams_family_at_park.jpg" alt="Decorated cookies example" class="h-full w-auto object-cover rounded-lg shadow-sm" />
+  <img src="Dlux_and_sara_beach.jpg" alt="Cupcakes example" class=" h-autow-auto rounded-lg shadow-sm" />
 </div>
 </div>
 </section>
@@ -349,48 +388,87 @@
     </section>
   </main>
 
-   <!-- Footer -->
-    <footer class="bg-gray-50 ">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h4 class="text-lg font-semibold">Sweet Bakes Chicago</h4>
-            <nav class="mt-4 space-y-2">
-              <a href="/about.html" class="block text-teal-700 hover:text-teal-500">About Us</a>
-              <a href="/contact.html" class="block text-teal-700 hover:text-teal-500">Contact</a>
-              <a href="https://www.facebook.com/sweetbakeschicago" target="_blank" rel="noopener"
-                class="block text-teal-700 hover:text-teal-500">Facebook</a>
-            </nav>
-          </div>
+<!-- Footer (replace your current footer markup with this) -->
+<footer class="bg-brand-light-cream text-brand-dark-brown border-t">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="text-lg font-heading text-brand-brown font-semibold">
+          Sweet Bakes Chicago
+        </h4>
+        <nav class="mt-4 space-y-2">
+          <a
+            href="/about.html"
+            class="block text-brand-teal hover:text-brand-terracotta"
+            >About Us</a
+          >
+          <a
+            href="/contact.html"
+            class="block text-brand-teal hover:text-brand-terracotta"
+            >Contact</a
+          >
+          <a
+            href="https://www.facebook.com/sweetbakeschicago"
+            target="_blank"
+            rel="noopener"
+            class="block text-brand-teal hover:text-brand-terracotta"
+            >Facebook</a
+          >
+        </nav>
+      </div>
 
-          <div>
-            <h4 class="text-lg font-semibold">WHAT OUR CUSTOMERS HAVE TO SAY</h4>
-            <div class="mt-4 bg-white border rounded-lg p-4 shadow-sm">
-              <blockquote class="text-sm text-gray-700 italic">"Sara's cakes are beautiful and delicious. She is reliable and kind. My husband and I saved our top layer to eat on our anniversary, but he has had to persuade me more than once to not eat it early."</blockquote>
-              <p class="mt-3 text-xs text-gray-500">— Jane Morris</p>
-            </div>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-semibold">Get in touch</h4>
-            <address class="not-italic mt-4 text-gray-700 text-sm space-y-2">
-              <div>Chicago IL</div>
-              <div>Phone: <a href="tel:+7738700026" class="text-amber-800  hover:underline">+1 (773) 870-0026</a></div>
-              <div>Email: <a href="mailto:hello@sweetbakeschicago.com"
-                  class="text-amber-800 hover:underline">sweetbakeschicago@gmail.com</a></div>
-            </address>
-            <div class="mt-6">
-              <a href="/contact.html"
-                class="inline-block bg-orange-200  text-gray-400 px-4 py-2 rounded hover:bg-orange-100">Contact Us</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-8 text-xs text-gray-400 text-center">
-          © <span id="year"></span> Sweet Bakes Chicago. All rights reserved.
+      <div>
+        <h4 class="text-lg font-heading text-brand-brown font-semibold">
+          WHAT OUR CUSTOMERS HAVE TO SAY
+        </h4>
+        <div class="mt-4 bg-white border rounded-lg p-4 shadow-sm">
+          <blockquote class="text-sm italic">
+            "Sara's cakes are beautiful and delicious. She is reliable and kind.
+            My husband and I saved our top layer to eat on our anniversary, but
+            he has had to persuade me more than once to not eat it early."
+          </blockquote>
+          <p class="mt-3 text-xs text-brand-grey-green">— Jane Morris</p>
         </div>
       </div>
-    </footer>
+
+      <div>
+        <h4 class="text-lg font-heading text-brand-brown font-semibold">
+          Get in touch
+        </h4>
+        <address class="not-italic mt-4 text-sm space-y-2">
+          <div>Chicago IL</div>
+          <div>
+            Phone:
+            <a
+              href="tel:+7738700026"
+              class="text-brand-terracotta hover:underline"
+              >+1 (773) 870-0026</a
+            >
+          </div>
+          <div>
+            Email:
+            <a
+              href="mailto:hello@sweetbakeschicago.com"
+              class="text-brand-terracotta hover:underline"
+              >sweetbakeschicago@gmail.com</a
+            >
+          </div>
+        </address>
+        <div class="mt-6">
+          <a
+            href="/contact.html"
+            class="inline-block bg-brand-teal text-white px-4 py-2 rounded hover:bg-brand-grey-green"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 text-xs text-brand-grey-green text-center">
+      © <span id="year"></span> Sweet Bakes Chicago. All rights reserved.
+    </div>
+  </div>
+</footer>
 
   <script>
     // footer year and mobile menu toggle
