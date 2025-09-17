@@ -6,7 +6,7 @@
   <title>Cakes — Sweet Bakes Chicago</title>
 
   <!-- Tailwind build -->
-  <link rel="stylesheet" crossorigin href="/assets/style-BCKk9zCX.css">
+  <link rel="stylesheet" crossorigin href="/assets/style-9tmKuIPV.css">
 </head>
 <body class="antialiased text-gray-800 bg-white">
 
@@ -16,7 +16,7 @@
     <!-- Logo (centered) -->
     <div class="flex justify-center py-6">
       <a href="index.html" class="flex items-center gap-3">
-        <img src="/assets/sweet_bakes_logo-BG1b9R3m.png" alt="Sweet Bakes Chicago"
+        <img src="sweet_bakes_logo.png" alt="Sweet Bakes Chicago"
           class="h-96 w-auto object-contain" />
       </a>
     </div>
@@ -225,7 +225,7 @@
   <!-- HERO -->
   <section class="w-full">
     <div class="w-full h-44 md:h-64 bg-gray-100">
-      <img src="/assets/cake_hero_cupcakes-LPE0Croh.jpg" alt="Cakes hero" class="object-cover w-full h-full" />
+      <img src="cake_hero_cupcakes.jpg" alt="Cakes hero" class="object-cover w-full h-full" />
     </div>
   </section>
 
@@ -240,7 +240,7 @@
     </section>
 
     <!-- Traditional Flavors -->
-    <section class="bg-white border rounded-lg p-6 shadow-sm">
+    <!-- <section class="bg-white border rounded-lg p-6 shadow-sm">
       <h2 class="text-2xl font-semibold mb-4">Traditional Flavors</h2>
       <p class="mb-4 text-sm text-gray-600">Gluten, Dairy, Egg, and Sugar Free Options Available</p>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -261,7 +261,117 @@
           <li>Coffee</li>
           <li>Cinnamon</li>
         </ul>
-      </div>
+      </div> -->
+
+      <style>
+  /* Base style for custom bullets */
+  .list-with-svgs {
+    list-style: none; /* Remove default bullet */
+    padding-left: 0; /* Adjust padding if needed */
+  }
+
+  .list-with-svgs li {
+    position: relative;
+    padding-left: 28px; /* Space for the SVG */
+    margin-bottom: 8px; /* Adjust spacing between list items */
+  }
+
+  .list-with-svgs li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; /* SVG width */
+    height: 20px; /* SVG height */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  /* Specific SVG styles */
+  .list-with-svgs .white-cake::before {
+    background-image: url('/svgs/cake-thin-white-svgrepo-com.svg');
+  }
+
+  .list-with-svgs .yellow-cake::before {
+    background-image: url('/svgs/cake-thin-yellow-svgrepo-com.svg');
+  }
+
+  /* Assuming you want a default chocolate SVG, if not, adjust */
+  .list-with-svgs .chocolate-cake::before {
+    background-image: url('/svgs/cake-thin-chocolate-svgrepo-com.svg');
+  }
+
+  .list-with-svgs .red-velvet-cake::before {
+    background-image: url('/svgs/cake-thin-red-velvet-svgrepo-com.svg');
+  }
+
+  .list-with-svgs .strawberry-cake::before {
+    background-image: url('/svgs/strawberry-svgrepo-com.svg');
+  }
+
+  .list-with-svgs .lemon-cake::before {
+    background-image: url('/svgs/lemon-svgrepo-com.svg');
+  }
+
+  .list-with-svgs .lime-cake::before {
+    background-image: url('/svgs/lime-svgrepo-com.svg');
+  }
+
+  .list-with-svgs .raspberry-cake::before {
+    /* You don't have a raspberry SVG in your list, using berry for now */
+    background-image: url('/svgs/berry-cooking-food-svgrepo-com.svg');
+  }
+
+  .list-with-svgs .marble-cake::before {
+    background-image: url('/svgs/marble-cake-svgrepo-com.svg');
+  }
+
+  .list-with-svgs .mocha-flavor::before {
+    background-image: url('/svgs/mocha-svgrepo-com.svg');
+  }
+
+  .list-with-svgs .coffee-flavor::before {
+    background-image: url('/svgs/coffee-bean-filled-roast-brew-svgrepo-com.svg');
+  }
+
+  .list-with-svgs .cinnamon-flavor::before {
+    background-image: url('/svgs/cinnamon.svg');
+  }
+</style>
+
+<!-- Traditional Flavors -->
+<section class="bg-white border rounded-lg p-6 shadow-sm">
+  <h2 class="text-2xl font-semibold mb-4">Traditional Flavors</h2>
+  <p class="mb-4 text-sm text-gray-600">
+    Gluten, Dairy, Egg, and Sugar Free Options Available
+  </p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <ul class="list-with-svgs space-y-2">
+      <li class="white-cake">White</li>
+      <li class="yellow-cake">Yellow</li>
+      <li class="chocolate-cake">Chocolate</li>
+      <li class="red-velvet-cake">Red Velvet</li>
+      <li class="strawberry-cake">Strawberry</li>
+      <li class="lemon-cake">Lemon</li>
+    </ul>
+
+    <ul class="list-with-svgs space-y-2">
+      <li class="lime-cake">Lime</li>
+      <li class="raspberry-cake">Raspberry</li>
+      <li class="marble-cake">Marble (swirl of two flavors)</li>
+      <li class="mocha-flavor">Mocha</li>
+      <li class="coffee-flavor">Coffee</li>
+      <li class="cinnamon-flavor">Cinnamon</li>
+    </ul>
+  </div>
+
+  <p class="mt-4 text-sm text-gray-600">
+    Can't find what you want? We often create custom flavors — ask when placing
+    your order.
+  </p>
+</section>
 
       <p class="mt-4 text-sm text-gray-600">Can't find what you want? We often create custom flavors — ask when
         placing your order.</p>
@@ -302,33 +412,34 @@
       <p class="mb-4 text-sm text-gray-600">Add any of these flavors to your frosting for an additional kick of flavor.</p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <div class="p-3 border rounded">
-          <h4 class="font-semibold">Classic Add-ins</h4>
+          <h4 class="font-semibold">Decadent</h4>
           <ul class="mt-2 text-sm space-y-1">
             <li>Chocolate</li>
-            <li>Lemon</li>
-            <li>Lime</li>
-            <li>Orange</li>
-            <li>Strawberry</li>
+            <li>Salted Caramel,</li>
+            <li>Maple</li>
+            <li>Bourbon</li>
           </ul>
         </div>
 
         <div class="p-3 border rounded">
           <h4 class="font-semibold">Fruit & Citrus</h4>
           <ul class="mt-2 text-sm space-y-1">
-            <li>Blackberry</li>
+            <li>Strawberry</li>
             <li>Raspberry</li>
-            <li>Rosewater</li>
-            <li>Lavender</li>
-            <li>Cinnamon</li>
+            <li>Blackberry</li>
+            <li>Lemon</li>
+            <li>Lime</li>
+            <li>Orange</li>
           </ul>
         </div>
 
         <div class="p-3 border rounded">
-          <h4 class="font-semibold">Decadent Flavors</h4>
+          <h4 class="font-semibold">Spices & Essences</h4>
           <ul class="mt-2 text-sm space-y-1">
-            <li>Salted Caramel</li>
-            <li>Maple</li>
-            <li>Coffee</li>
+            <li>Cinnamon</li>
+            <li>Ginger</li>
+            <li>Lavender</li>
+            <li>Rosewater</li>
             <li>Peppermint</li>
           </ul>
         </div>
@@ -367,14 +478,14 @@
 
     <!-- Signature Gourmet Cakes (Sara's specialties) -->
     <section>
-      <h2 class="text-2xl font-semibold mb-4">Signature Gourmet Cakes — Sara's Specialties</h2>
+      <h2 class="text-4xl font-semibold mb-4">Signature Gourmet Cakes — Sara's Specialties</h2>
 
       <p class="text-sm text-gray-600 mb-6">These are our specialty designs and flavor combinations — perfect for celebrations where you want something unique and memorable.</p>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Card 1 -->
         <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
-          <img src="chocolate_chip_cookie_dough.jpg" alt="Chocolate Chip Cookie Dough" class="w-full h-44 object-contain" />
+          <!-- <img src="chocolate_chip_cookie_dough.jpg" alt="Chocolate Chip Cookie Dough" class="w-full h-44 object-contain" /> -->
           <div class="p-4">
             <h3 class="font-semibold">Chocolate Chip Cookie Dough</h3>
             <p class="mt-2 text-sm text-gray-700">Brown sugar cake filled with egg-less chocolate chip cookie dough. Frosted with salted vanilla buttercream or chocolate ganache.</p>
@@ -383,7 +494,7 @@
 
         <!-- Card 2 -->
         <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
-          <img src="can_i_have_smore.jpg" alt="May I Have S'more" class="w-full h-44 object-cover" />
+          <!-- <img src="can_i_have_smore.jpg" alt="May I Have S'more" class="w-full h-44 object-cover" /> -->
           <div class="p-4">
             <h3 class="font-semibold">May I Have S'more</h3>
             <p class="mt-2 text-sm text-gray-700">Graham cracker cake filled with chocolate ganache. Frosted with toasted
@@ -394,7 +505,7 @@ marshmallow frosting and topped with ganache drip.
 
         <!-- Card 3 -->
         <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
-          <img src="berry_lemon.jpg" alt="Triple Berry Lemon" class="w-full h-44 object-contain" />
+          <!-- <img src="berry_lemon.jpg" alt="Triple Berry Lemon" class="w-full h-44 object-contain" /> -->
           <div class="p-4">
             <h3 class="font-semibold">Triple Berry Lemon</h3>
             <p class="mt-2 text-sm text-gray-700">Light and fluffy lemon cake with whole blueberries. Filled with a layer of
@@ -405,7 +516,7 @@ Italian buttercream.</p>
 
         <!-- Card 4 -->
         <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
-          <img src="ube_dream.jpg" alt="Ube Dream" class="w-full h-44 object-cover" />
+          <!-- <img src="ube_dream.jpg" alt="Ube Dream" class="w-full h-44 object-cover" /> -->
           <div class="p-4">
             <h3 class="font-semibold">Ube Dream</h3>
             <p class="mt-2 text-sm text-gray-700">This boba tea inspired cake is made with real ube! It is an ube sponge filled with vanilla mousse and frosted in an ube and
@@ -415,7 +526,7 @@ mascarpone buttercream. It's naturally purple!</p>
 
         <!-- Card 5 -->
         <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
-          <img src="chocolate_chai.jpg" alt="Chocolate Chai Cake Pops" class="w-full h-44 object-cover" />
+          <!-- <img src="chocolate_chai.jpg" alt="Chocolate Chai Cake Pops" class="w-full h-44 object-cover" /> -->
           <div class="p-4">
             <h3 class="font-semibold">Chocolate Chai</h3>
             <p class="mt-2 text-sm text-gray-700">Our delicious chocolate cake mixed with real black tea, cardamom, cinnamon, ginger, and black pepper. Filled and frosted in Chai tea Italian
@@ -425,7 +536,7 @@ buttercream. Topped with chocolate ganache drip.</p>
 
         <!-- Card 6 -->
         <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
-          <img src="chocolate_burbon.jpg" alt="Chocolate Bourbon" class="w-full h-44 object-cover" />
+          <!--<img src="chocolate_burbon.jpg" alt="Chocolate Bourbon" class="w-full h-44 object-cover" />!-->
           <div class="p-4">
             <h3 class="font-semibold">Chocolate Bourbon</h3>
             <p class="mt-2 text-sm text-gray-700">Contains alcohol, for adults only Super moist chocolate cake infused with real bourbon whiskey. Filled with
@@ -494,56 +605,107 @@ chocolate ganache. Topped with chocolate bourbon buttercream.</p>
         </article>
       </div>
 
-      <div class="mt-6 text-sm">
-        <p>Want a custom version of a signature cake? Contact us to discuss flavors, dietary needs, and custom decor.</p>
-        <a href="/contact.html" class="inline-block mt-3 bg-rose-600 text-white px-4 py-2 rounded hover:bg-rose-700">Contact / Order</a>
-      </div>
+      <div class="mt-6 text-sm text-brand-dark-brown">
+  <p>
+    Want a custom version of a signature cake? Contact us to discuss flavors,
+    dietary needs, and custom decor.
+  </p>
+  <a
+    href="/contact.html"
+    class="inline-block mt-3 bg-brand-teal text-white px-4 py-2 rounded hover:bg-brand-grey-green"
+    >Request a quote</a
+  >
+</div>
     </section>
 
   </main>
 
- <!-- Footer -->
-    <footer class="bg-gray-50 ">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h4 class="text-lg font-semibold">Sweet Bakes Chicago</h4>
-            <nav class="mt-4 space-y-2">
-              <a href="/about.html" class="block text-teal-700 hover:text-teal-500">About Us</a>
-              <a href="/contact.html" class="block text-teal-700 hover:text-teal-500">Contact</a>
-              <a href="https://www.facebook.com/sweetbakeschicago" target="_blank" rel="noopener"
-                class="block text-teal-700 hover:text-teal-500">Facebook</a>
-            </nav>
-          </div>
+ <!-- Footer (replace your current footer markup with this) -->
+<footer class="bg-brand-light-cream text-brand-dark-brown border-t">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="text-lg font-heading text-brand-brown font-semibold">
+          Sweet Bakes Chicago
+        </h4>
+        <nav class="mt-4 space-y-2">
+          <a
+            href="/about.html"
+            class="block text-brand-teal hover:text-brand-terracotta"
+            >About Us</a
+          >
+          <a
+            href="/contact.html"
+            class="block text-brand-teal hover:text-brand-terracotta"
+            >Contact</a
+          >
+          <a
+            href="https://www.facebook.com/sweetbakeschicago"
+            target="_blank"
+            rel="noopener"
+            class="block text-brand-teal hover:text-brand-terracotta"
+            >Facebook</a
+          >
+          <a href="https://www.instagram.com/sweetbakeschicago/"
+            class="block text-brand-teal hover:text-brand-terracotta"
+            rel="noopener"
+            target="_blank">Instagram
+          </a>
+        </nav>
+      </div>
 
-          <div>
-            <h4 class="text-lg font-semibold">WHAT OUR CUSTOMERS HAVE TO SAY</h4>
-            <div class="mt-4 bg-white border rounded-lg p-4 shadow-sm">
-              <blockquote class="text-sm text-gray-700 italic">"Sara's cakes are beautiful and delicious. She is reliable and kind. My husband and I saved our top layer to eat on our anniversary, but he has had to persuade me more than once to not eat it early."</blockquote>
-              <p class="mt-3 text-xs text-gray-500">— Jane Morris</p>
-            </div>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-semibold">Get in touch</h4>
-            <address class="not-italic mt-4 text-gray-700 text-sm space-y-2">
-              <div>Chicago IL</div>
-              <div>Phone: <a href="tel:+7738700026" class="text-amber-800  hover:underline">+1 (773) 870-0026</a></div>
-              <div>Email: <a href="mailto:hello@sweetbakeschicago.com"
-                  class="text-amber-800 hover:underline">sweetbakeschicago@gmail.com</a></div>
-            </address>
-            <div class="mt-6">
-              <a href="/contact.html"
-                class="inline-block bg-orange-200  text-gray-400 px-4 py-2 rounded hover:bg-orange-100">Contact Us</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-8 text-xs text-gray-400 text-center">
-          © <span id="year"></span> Sweet Bakes Chicago. All rights reserved.
+      <div>
+        <h4 class="text-lg font-heading text-brand-brown font-semibold">
+          WHAT OUR CUSTOMERS HAVE TO SAY
+        </h4>
+        <div class="mt-4 bg-white border rounded-lg p-4 shadow-sm">
+          <blockquote class="text-sm italic">
+            "Sara's cakes are beautiful and delicious. She is reliable and kind.
+            My husband and I saved our top layer to eat on our anniversary, but
+            he has had to persuade me more than once to not eat it early."
+          </blockquote>
+          <p class="mt-3 text-xs text-brand-grey-green">— Jane Morris</p>
         </div>
       </div>
-    </footer>
+
+      <div>
+        <h4 class="text-lg font-heading text-brand-brown font-semibold">
+          Get in touch
+        </h4>
+        <address class="not-italic mt-4 text-sm space-y-2">
+          <div>Chicago IL</div>
+          <div>
+            Phone:
+            <a
+              href="tel:+7738700026"
+              class="text-brand-terracotta hover:underline"
+              >+1 (773) 870-0026</a
+            >
+          </div>
+          <div>
+            Email:
+            <a
+              href="mailto:hello@sweetbakeschicago.com"
+              class="text-brand-terracotta hover:underline"
+              >sweetbakeschicago@gmail.com</a
+            >
+          </div>
+        </address>
+        <div class="mt-6">
+          <a
+            href="/contact.html"
+            class="inline-block bg-brand-teal text-white px-4 py-2 rounded hover:bg-brand-grey-green"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 text-xs text-brand-grey-green text-center">
+      © <span id="year"></span> Sweet Bakes Chicago. All rights reserved.
+    </div>
+  </div>
+</footer>
 
     <!-- Small JS: mobile toggle and year -->
     <script>
