@@ -33,3 +33,142 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading); /* Using the CSS variable */
   color: var(--color-brand-brown); /* Using the CSS variable */
 }
+
+#cid_8 .jfUpload-files-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--color-brand-terracotta);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    position: relative; /* so input can be positioned over it */
+    transition: background .15s ease;
+  }
+  #cid_8 .jfUpload-files-container:hover {
+    background: var(--color-brand-dark-brown);
+  }
+  #cid_8 .jfUpload-files-container:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(129,199,190,0.16);
+  }
+
+  /* Ensure the real file input covers the visible container so clicks open picker.
+     We keep it invisible (opacity:0) but fully interactive and keyboard focusable. */
+  #cid_8 .jfUpload-files-container input[type="file"],
+  #cid_8 .inputContainer input[type="file"],
+  #cid_8 input.fileupload-input,
+  #cid_8 .form-upload-multiple {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2; /* above any decorative layers */
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  /* Hide duplicate/invisible buttons injected by uploader libs so only one visible layer exists.
+     Use !important to override inline styles coming from JS. */
+  #cid_8 .jfUpload-button,
+  #cid_8 .jfUpload-button-container,
+  #cid_8 .qq-upload-button,
+  #cid_8 .qq-upload-drop-area {
+    display: none !important;
+  }
+
+  /* If library also creates an input container that looks like a button, make sure it's transparent
+     so the themed container is visible (but keep it interactive if present). */
+  #cid_8 .inputContainer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: transparent;
+  }
+
+  /* Uploaded files list (if the library appends thumbnails/files inline) */
+  #cid_8 .qq-upload-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  #cid_8 .qq-upload-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-brand-light-cream);
+    color: var(--color-brand-dark-brown);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+  #cid_8 .qq-upload-img-container {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 0.25rem;
+    flex: 0 0 40px;
+  }
+  #cid_8 .qq-upload-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  #cid_8 .qq-upload-file {
+    max-width: 10rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+  #cid_8 .qq-upload-size {
+    color: var(--color-brand-grey-green);
+    font-size: 0.85rem;
+  }
+
+  /* Delete control styling */
+  #cid_8 .qq-upload-delete {
+    background: transparent;
+    border: 1px solid rgba(0,0,0,0.06);
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.35rem;
+    cursor: pointer;
+    color: var(--color-brand-dark-brown);
+    margin-left: 0.25rem;
+    z-index: 1;
+  }
+  #cid_8 .qq-upload-delete:hover {
+    background: var(--color-brand-terracotta);
+    color: #fff;
+  }
+
+  #cid_8 .qq-upload-failed-text{
+    display: none;
+  }
+
+  /* Responsive: full width on small screens */
+  @media (max-width: 640px) {
+    #cid_8 .jfUpload-files-container {
+      width: 100%;
+      justify-content: center;
+    }
+    #cid_8 .qq-upload-list {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    #cid_8 .qq-upload-list li {
+      width: 100%;
+    }
+  }
