@@ -93,26 +93,37 @@ h1, h2, h3, h4, h5, h6 {
     background: transparent;
   }
 
-  /* Uploaded files list (if the library appends thumbnails/files inline) */
-  #cid_8 .qq-upload-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-    margin-top: 0.5rem;
-  }
-  #cid_8 .qq-upload-list li {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: var(--color-brand-light-cream);
-    color: var(--color-brand-dark-brown);
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.375rem;
-    border: 1px solid rgba(0,0,0,0.06);
-  }
+  /* Uploaded files list — stack vertically instead of inline */
+#cid_8 .qq-upload-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;     /* stack items vertically */
+  gap: 0.5rem;
+  align-items: stretch;      /* make items take available width */
+  margin-top: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;    /* include padding/border within width */
+  min-width: 0;              /* allow flex children to shrink properly */
+}
+
+/* Each uploaded item stays a horizontal row (thumbnail + text + controls) */
+#cid_8 .qq-upload-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-brand-light-cream);
+  color: var(--color-brand-dark-brown);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid rgba(0,0,0,0.06);
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0;              /* avoid unexpected overflow/cutting */
+  overflow: visible;        /* ensure child visuals aren't clipped unexpectedly */
+}
+  
   #cid_8 .qq-upload-img-container {
     width: 40px;
     height: 40px;
@@ -120,19 +131,24 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 0.25rem;
     flex: 0 0 40px;
   }
-  #cid_8 .qq-upload-img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  #cid_8 .qq-upload-file {
-    max-width: 10rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-weight: 600;
-  }
+  /* Make sure the image is centered and not aligned to the left */
+#cid_8 .qq-upload-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;   /* center crop instead of left-crop */
+  display: block;
+}
+
+/* File name area should be allowed to truncate but not push out the layout */
+#cid_8 .qq-upload-file {
+  max-width: calc(100% - 56px); /* reserve space for thumbnail + controls */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+  min-width: 0;               /* prevent flex overflow */
+}
   #cid_8 .qq-upload-size {
     color: var(--color-brand-grey-green);
     font-size: 0.85rem;
@@ -158,17 +174,55 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 
-  /* Responsive: full width on small screens */
-  @media (max-width: 640px) {
-    #cid_8 .jfUpload-files-container {
-      width: 100%;
-      justify-content: center;
-    }
-    #cid_8 .qq-upload-list {
-      flex-direction: column;
-      align-items: stretch;
-    }
-    #cid_8 .qq-upload-list li {
-      width: 100%;
-    }
+ /* Small-screen tweaks: keep full-width behavior, make sure spacing fits */
+@media (max-width: 640px) {
+  /* #cid_8 is the element in your markup with class w-1/4 */
+  #cid_8 {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    overflow: visible; /* allow injected children to be visible */
   }
+
+
+  /* items already stack due to the global rule; ensure they fill width */
+  #cid_8 .qq-upload-list {
+    align-items: stretch;
+  }
+
+  #cid_8 .qq-upload-list li {
+    width: 100%;
+  }
+}
+
+
+
+/* SUPER IMPORTANT CODE THAT CONTROLS THE NAVIGATON DROP DOWNS */
+nav details summary::-webkit-details-marker,
+nav details summary::marker {
+  display: none;
+}
+
+/* show main dropdown when outer details is open */
+nav details[open] > .dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* show nested submenu when nested details is open */
+nav details details[open] > .submenu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+/* small focus ring for keyboard users */
+nav details summary:focus {
+  outline: 2px solid transparent;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.12);
+  border-radius: 6px;
+}
+/* SUPER IMPORTANT CODE THAT CONTROLS THE NAVIGATON DROP DOWNS */

@@ -13,217 +13,223 @@
 <body class="antialiased text-gray-800 bg-white">
 
  <!-- NAV + HERO COMBINED -->
-<header class="bg-white shadow-sm">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Logo (centered) -->
-    <div class="flex justify-center py-6">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="sweet_bakes_logo.png" alt="Sweet Bakes Chicago"
-          class="h-96 w-auto object-contain" />
-      </a>
-    </div>
+    <header class="bg-brand-light-cream shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Logo (centered) -->
+            <div class="flex justify-center py-6">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="sweet_bakes_logo_nobg.png" alt="Sweet Bakes Chicago" class="h-96 w-auto object-contain" />
+                </a>
+            </div>
 
-    <!-- Centered navigation (desktop) -->
-    <nav class="hidden md:flex justify-center border-t pt-4 pb-4" aria-label="Main">
-      <ul class="flex gap-10 text-gray-700 items-center">
-        <li>
-          <a href="index.html"
-            class="px-2 py-1 rounded transition-colors duration-150
+            <!-- Mobile navigation-->
+            <nav class="md:hidden" aria-label="Mobile navigation">
+                <div class="flex items-start">
+                    <!-- LEFT COLUMN -->
+                    <ul role="menu" class="flex-1 space-y-2 text-gray-700 ">
+                        <li>
+                            <a href="index.html" role="menuitem" class="block w-full px-4 py-2 rounded transition-colors duration-150
+                  text-gray-700 hover:bg-gray-100 hover:text-gray-900
+                  focus:bg-gray-100 focus:text-gray-900">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about-us.html" role="menuitem" class="block w-full px-4 py-2 rounded transition-colors duration-150
+                  text-gray-700 hover:bg-gray-100 hover:text-gray-900
+                  focus:bg-gray-100 focus:text-gray-900">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="gallery.html" role="menuitem" class="block w-full px-4 py-2 rounded transition-colors duration-150
+                  text-gray-700 hover:bg-gray-100 hover:text-gray-900
+                  focus:bg-gray-100 focus:text-gray-900">
+                                Gallery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" role="menuitem" class="block w-full px-4 py-2 rounded transition-colors duration-150
+                  text-gray-700 hover:bg-gray-100 hover:text-gray-900
+                  focus:bg-gray-100 focus:text-gray-900">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- RIGHT COLUMN (products, grouped) -->
+                    <ul role="menu" class="flex-1 space-y-4 text-gray-70 mb-2">
+                        <!-- Cake group: flavors + pricing (closer together) -->
+                        <li class="border-l">
+                            <ul>
+                                <li>
+                                    <a href="flavors.html" role="menuitem" class="block w-full px-4 py-.5 rounded transition-colors duration-150
+                      text-gray-700 hover:bg-gray-100 hover:text-gray-900
+                      focus:bg-gray-100 focus:text-gray-900">
+                                        Cake Flavors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="pricing.html" role="menuitem" class="block w-full px-4 py-.5 rounded transition-colors duration-150
+                      text-gray-700 hover:bg-gray-100 hover:text-gray-900
+                      focus:bg-gray-100 focus:text-gray-900">
+                                        Cake Pricing
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Cookies group: closer together -->
+                        <li class="border-l">
+                            <ul class="">
+                                <li>
+                                    <a href="traditional-cookies.html" role="menuitem" class="block w-full px-4 py-.5 rounded transition-colors duration-150
+                      text-gray-700 hover:bg-gray-100 hover:text-gray-900
+                      focus:bg-gray-100 focus:text-gray-900">
+                                        Traditional Cookies
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="decorated-cookies.html" role="menuitem" class="block w-full px-4 py-.5 rounded transition-colors duration-150
+                      text-gray-700 hover:bg-gray-100 hover:text-gray-900
+                      focus:bg-gray-100 focus:text-gray-900">
+                                        Decorated Cookies
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Donut + Pie + Macrons group (very close together) -->
+                        <li>
+                            <ul class="border-l">
+                                <li>
+                                    <a href="macarons.html" role="menuitem" class="block w-full px-4 py-.5 rounded transition-colors duration-150
+                  text-gray-700 hover:bg-gray-100 hover:text-gray-900
+                  focus:bg-gray-100 focus:text-gray-900">
+                                        Macarons
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="donuts.html" role="menuitem" class="block w-full px-4 py-.5 rounded transition-colors duration-150
+                      text-gray-700 hover:bg-gray-100 hover:text-gray-900
+                      focus:bg-gray-100 focus:text-gray-900">
+                                        Donuts
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="pies.html" role="menuitem" class="block w-full px-4 py-.5 rounded transition-colors duration-150
+                      text-gray-700 hover:bg-gray-100 hover:text-gray-900
+                      focus:bg-gray-100 focus:text-gray-900">
+                                        Pies
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Desktop Nav-->
+            <nav class="hidden md:visible md:flex justify-center border-t pt-4 pb-4" aria-label="Main">
+                <ul class="md:flex gap-10 text-gray-700 items-center">
+                    <li>
+                        <a href="index.html" class="px-2 py-1 rounded transition-colors duration-150
                    text-gray-700 hover:bg-gray-100 hover:text-gray-900
                    focus:bg-gray-100 focus:text-gray-900">Home</a>
-        </li>
+                    </li>
 
-        <li>
-          <a href="about-us.html"
-            class="px-2 py-1 rounded transition-colors duration-150
+                    <li>
+                        <a href="about-us.html" class="px-2 py-1 rounded transition-colors duration-150
                    text-gray-700 hover:bg-gray-100 hover:text-gray-900
                    focus:bg-gray-100 focus:text-gray-900">About Us</a>
-        </li>
+                    </li>
 
-        <li>
-          <a href="gallery.html"
-            class="px-2 py-1 rounded transition-colors duration-150
+                    <li>
+                        <a href="gallery.html" class="px-2 py-1 rounded transition-colors duration-150
                    text-gray-700 hover:bg-gray-100 hover:text-gray-900
                    focus:bg-gray-100 focus:text-gray-900">Gallery</a>
-        </li>
+                    </li>
 
-        <!-- Products dropdown (outer group) -->
-        <li class="relative group/products">
-          <a href="cakes.html"
-            class="flex items-center gap-2 px-2 py-1 rounded transition-colors duration-150
-                   text-gray-700 hover:bg-gray-100 hover:text-gray-900
-                   focus:bg-gray-100 focus:text-gray-900"
-            aria-haspopup="true" aria-expanded="false">
-            Products
-            <svg class="w-4 h-4 text-current" viewBox="0 0 20 20"
-              fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd"
-                d="M5.23 7.21a.75.75 0 011.06-.02L10 10.67l3.71-3.48a.75.75 0 111.04 1.08l-4.25 4a.75.75 0 01-1.06 0l-4.25-4a.75.75 0 01-.02-1.06z"
-                clip-rule="evenodd" />
-            </svg>
-          </a>
+                    <!-- Products dropdown using details/summary (no JS) -->
+                    <li class="relative">
+                        <details class="group relative">
+                            <summary class="flex items-center gap-2 px-2 py-1 rounded transition-colors duration-150
+             text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none
+             cursor-pointer list-none" aria-haspopup="true">
+                                Products
+                                <svg class="w-4 h-4 text-current" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M5.23 7.21a.75.75 0 011.06-.02L10 10.67l3.71-3.48a.75.75 0 111.04 1.08l-4.25 4a.75.75 0 01-1.06 0l-4.25-4a.75.75 0 01-.02-1.06z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </summary>
 
-          <!-- Main dropdown: anchored to bottom of trigger (top-full) no gap -->
-          <div
-            class="invisible opacity-0 pointer-events-none
-                   group-hover/products:visible group-hover/products:opacity-100 group-hover/products:pointer-events-auto
-                   group-focus-within/products:visible group-focus-within/products:opacity-100
-                   group-focus-within/products:pointer-events-auto
-                   transition-opacity duration-150 absolute left-1/2 top-full
-                   transform -translate-x-1/2 w-48 bg-white border rounded-md
-                   shadow-lg py-2 z-30"
-            role="menu" aria-label="Products">
+                            <!-- Main dropdown: anchored to bottom of trigger -->
+                            <div class="dropdown absolute left-1/2 top-full transform translate-x-12 translate-y-1
+             w-48 bg-white border rounded-md shadow-lg py-2 z-30
+             opacity-0 invisible pointer-events-none transition-all duration-150" role="menu" aria-label="Products">
 
-            <!-- Cakes (wrapper group so submenu stays open when pointer moves) -->
-            <div class="relative group/cakes">
-              <a href="cakes.html"
-                class="block px-4 py-2 text-sm text-gray-700 transition-colors
-           duration-150 hover:bg-gray-100 hover:text-gray-900
-           focus:bg-gray-100 focus:text-gray-900" role="menuitem">
-                Cakes
-              </a>
+                                <!-- Cakes (nested details for click-to-open on touch) -->
+                                <details id="details-cakes" class="group relative">
+                                    <summary class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-150
+                 hover:bg-gray-100 hover:text-gray-900 cursor-pointer list-none">
+                                        Cakes
+                                    </summary>
 
-              <!-- Cakes submenu (appears to the right) -->
-              <div
-                class="invisible opacity-0 pointer-events-none
-           group-hover/cakes:visible group-hover/cakes:opacity-100
-           group-hover/cakes:pointer-events-auto
-           group-focus-within/cakes:visible group-focus-within/cakes:opacity-100
-                   group-focus-within/cakes:pointer-events-auto
-           transition-opacity duration-150 absolute left-full top-0
-           -ml-px w-44 bg-white border rounded-md shadow-md py-2 z-40"
-                role="menu" aria-label="Cakes">
+                                    <div class="submenu absolute left-full top-0 -ml-px w-44 bg-white border rounded-md
+                 shadow-md py-2 z-40 translate-x-0.5 opacity-0 invisible pointer-events-none
+                 transition-all duration-150" role="menu" aria-label="Cakes">
+                                        <a href="flavors.html" class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-150
+                    hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900"
+                                            role="menuitem">Flavors</a>
+                                        <a href="pricing.html" class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-150
+                    hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900"
+                                            role="menuitem">Pricing</a>
+                                    </div>
+                                </details>
 
-                <!-- submenu items -->
-                <a href="flavors.html"
-                  class="block px-4 py-2 text-sm text-gray-700 transition-colors
-                         duration-150 hover:bg-gray-100 hover:text-gray-900
-                         focus:bg-gray-100 focus:text-gray-900" role="menuitem">Flavors</a>
-                <a href="pricing.html"
-                  class="block px-4 py-2 text-sm text-gray-700 transition-colors
-                         duration-150 hover:bg-gray-100 hover:text-gray-900
-                         focus:bg-gray-100 focus:text-gray-900" role="menuitem">Pricing</a>
+                                <!-- Cookies (nested details) -->
+                                <details id="details-cookies" class="group relative">
+                                    <summary class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-150
+                 hover:bg-gray-100 hover:text-gray-900 cursor-pointer list-none">
+                                        Cookies
+                                    </summary>
 
-              </div>
-            </div>
+                                    <div class="submenu absolute left-full top-0 -ml-px w-44 bg-white border rounded-md
+                 shadow-md py-2 z-40 translate-x-0.5 opacity-0 invisible pointer-events-none
+                 transition-all duration-150" role="menu" aria-label="Cookies">
+                                        <a href="traditional-cookies.html" class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-150
+                    hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900"
+                                            role="menuitem">Traditional Cookies</a>
+                                        <a href="decorated-cookies.html" class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-150
+                    hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900"
+                                            role="menuitem">Decorated Cookies</a>
+                                        <a href="macarons.html" class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-150
+                    hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900"
+                                            role="menuitem">Macarons</a>
+                                    </div>
+                                </details>
 
-            <!-- Cookies (wrapper group) -->
-            <div class="relative group/cookies">
-              <a href="traditional-cookies.html"
-                class="block px-4 py-2 text-sm text-gray-700 transition-colors
-           duration-150 hover:bg-gray-100 hover:text-gray-900
-           focus:bg-gray-100 focus:text-gray-900" role="menuitem">
-                Cookies
-              </a>
+                                <!-- Donuts -->
+                                <a href="donuts.html" class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-150
+                hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900" role="menuitem">Donuts</a>
 
-              <!-- Cookies submenu (appears to the right) -->
-              <div
-                class="invisible opacity-0 pointer-events-none
-           group-hover/cookies:visible group-hover/cookies:opacity-100
-           group-hover/cookies:pointer-events-auto
-           group-focus-within/cookies:visible group-focus-within/cookies:opacity-100
-                   group-focus-within/cakes:pointer-events-auto
-           transition-opacity duration-150 absolute left-full top-0
-           -ml-px w-44 bg-white border rounded-md shadow-md py-2 z-40"
-                role="menu" aria-label="Cookies">
-                <a href="traditional-cookies.html"
-                  class="block px-4 py-2 text-sm text-gray-700 transition-colors
-             duration-150 hover:bg-gray-100 hover:text-gray-900
-             focus:bg-gray-100 focus:text-gray-900" role="menuitem">
-                  Traditional Cookies
-                </a>
-                <a href="decorated-cookies.html"
-                  class="block px-4 py-2 text-sm text-gray-700 transition-colors
-             duration-150 hover:bg-gray-100 hover:text-gray-900
-             focus:bg-gray-100 focus:text-gray-900" role="menuitem">
-                  Decorated Cookies
-                </a>
-                <a href="macarons.html"
-                  class="block px-4 py-2 text-sm text-gray-700 transition-colors
-             duration-150 hover:bg-gray-100 hover:text-gray-900
-             focus:bg-gray-100 focus:text-gray-900" role="menuitem">
-                  Macarons
-                </a>
-              </div>
-            </div>
+                                <!-- Pies -->
+                                <a href="pies.html" class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-150
+                hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900" role="menuitem">Pies</a>
+                            </div>
+                        </details>
+                    </li>
 
-            <!-- Donuts -->
-            <a href="donuts.html"
-              class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-150
-                     hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100
-                     focus:text-gray-900" role="menuitem">Donuts</a>
-
-            <!-- Pies -->
-            <a href="pies.html"
-              class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-150
-                     hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100
-                     focus:text-gray-900" role="menuitem">Pies</a>
-          </div>
-        </li>
-
-        <li>
-          <a href="contact.html"
-            class="px-2 py-1 rounded transition-colors duration-150
+                    <li>
+                        <a href="contact.html" class="px-2 py-1 rounded transition-colors duration-150
                    text-gray-700 hover:bg-gray-100 hover:text-gray-900
                    focus:bg-gray-100 focus:text-gray-900">Contact</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<!-- Mobile nav toggle -->
-<div class="md:hidden border-t">
-  <div class="px-4 py-3 flex items-center justify-between">
-    <div class="text-gray-700 font-medium">Menu</div>
-    <button id="mobileToggle" aria-controls="mobileMenu" aria-expanded="false"
-      class="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none
-                   focus:ring-2 focus:ring-rose-300">
-      <span class="sr-only">Open menu</span>
-      <svg id="iconOpen" class="w-6 h-6" fill="none" stroke="currentColor"
-        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-      <svg id="iconClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor"
-        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M6 18L18 6M6 6l12 12"></path>
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobile stacked links -->
-  <nav id="mobileMenu" class="px-4 pb-4 hidden" aria-label="Mobile menu">
-    <a href="index.html" class="block px-2 py-2 rounded text-gray-700 hover:bg-gray-50">Home</a>
-    <a href="about-us.html" class="block px-2 py-2 rounded text-gray-700 hover:bg-gray-50">About Us</a>
-    <a href="gallery.html" class="block px-2 py-2 rounded text-gray-700 hover:bg-gray-50">Gallery</a>
-
-    <div class="mt-2 border-t pt-2">
-      <div class="text-sm text-gray-500 px-2 pb-1">Products</div>
-
-      <!-- List all product pages for mobile -->
-      <a href="cakes.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Cakes</a>
-      <a href="flavors.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Cake Flavors</a>
-      <a href="pricing.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Cake Pricing</a>
-
-      <a href="traditional-cookies.html"
-        class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Traditional
-        Cookies</a>
-      <a href="decorated-cookies.html"
-        class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Decorated
-        Cookies</a>
-      <a href="macarons.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Macarons</a>
-
-      <a href="donuts.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Donuts</a>
-      <a href="pies.html" class="block px-4 py-2 rounded text-gray-700 hover:bg-gray-50">Pies</a>
-    </div>
-
-    <a href="contact.html" class="block mt-2 px-2 py-2 rounded text-gray-700 hover:bg-gray-50">Contact</a>
-  </nav>
-</div> 
-
-
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
 <body>
   <main>
@@ -902,3 +908,32 @@
     </div>
   </div>
 </footer>
+</body>
+<script>
+(function () {
+  // list the details ids you will add to the markup
+  const ids = [
+    'details-cakes',
+    'details-cookies'
+    // add other details ids here as needed
+  ];
+
+  ids.forEach(id => {
+    const d = document.getElementById(id);
+    if (!d) return;
+    d.addEventListener('toggle', () => {
+      // only act when this details was opened
+      if (!d.open) return;
+      ids.forEach(otherId => {
+        if (otherId === id) return;
+        const o = document.getElementById(otherId);
+        if (!o) return;
+        // don't close ancestors/descendants of the opened details
+        if (o.contains(d) || d.contains(o)) return;
+        o.open = false;
+      });
+    });
+  });
+})();
+</script>
+</html>
