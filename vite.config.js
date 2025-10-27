@@ -25,6 +25,7 @@ export default defineConfig({
         pies: resolve(__dirname, 'pies.html'),
         contact: resolve(__dirname, 'contact.html'),
         theme: resolve(__dirname, 'theme.html'),
+        christmas: resolve(__dirname, 'christmas-index.html'),
       },
     },
   },
