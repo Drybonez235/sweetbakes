@@ -13,18 +13,48 @@
     
 
     
-    <link rel="canonical" href="https://www.sweetbakeschicago.com">
+    <link rel="canonical" href="https://www.sweetbakeschicago.com/">
     
     
     <link href="/src/style.css" rel="stylesheet" />
 
     
     
-		<meta property="og:title" content="Sweet Bakes Chicago - Always Nut Free and Allergy Friendly">
+		<meta property="og:site_name" content="Sweet Bakes Chicago">
 		<meta property="og:description" content="Nut-free, allergy-friendly, and simply irresistible. Click to order from SweetBakes Chicago!">
 		<meta property="og:image" content="https://www.sweetbakeschicago.com/pumkin_spice_cupcake.jpg">
 		
-  <link href="https://fonts.googleapis.com/css2?family=Creepster&amp;display=swap" rel="stylesheet"> 
+ 	<meta property="og:title" content="Always Nut Free and Allergy Friendly">
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+	<!-- Google font: Chunky rounded (Baloo 2) for headings + Inter for body -->
+  
+<style>
+    :root{
+      --xmas-red: #c11b1b;
+      --xmas-green: #197a35;
+      --accent-brown: #8b5e3c;
+      --accent-gold: #d4a054;
+      --bg-cream: #fff9f1;
+    }
+
+    /* Small utility classes for colors + fonts used in markup */
+    .text-xmas-red{ color:var(--xmas-red); }
+    .bg-xmas-red{ background-color:var(--xmas-red); }
+    .text-xmas-green{ color:var(--xmas-green); }
+    .bg-xmas-green{ background-color:var(--xmas-green); }
+    .text-accent-brown{ color:var(--accent-brown); }
+    .text-accent-gold{ color:var(--accent-gold); }
+    .bg-cream{ background-color:var(--bg-cream); }
+
+    /* Headings: chunky rounded */
+    .font-chunky { font-family: "Baloo 2", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+
+    /* On small screens, keep hero text readable */
+    @media (max-width:640px){
+      .hero-title { font-size: 2.25rem; line-height:1; }
+    }
+  </style>
+	   
     
 </head>
 
@@ -248,131 +278,115 @@
         </div>
     </header>
 
-    <section class="w-full">
-  <div class="w-full h-64 md:h-96 bg-gray-100">
-    <img src="halloween_hero.avif" alt="Hero - Sweet Bakes Chicago" class="object-cover w-full h-full" />
+    <body class="bg-cream text-gray-800 antialiased min-h-screen flex flex-col">
+
+<!-- HERO -->
+<section class="relative w-full h-[75vh] overflow-hidden">
+  <img src="christmas_images/christmas_cookie_hero_banner.png" 
+       alt="Decorated Christmas cookies" 
+       class="object-cover w-full h-full">
+
+  <!-- Overlay 
+  <div class="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>-->
+
+  <!-- Text and CTA -->
+  <div class="absolute inset-0 flex flex-col items-center justify-center text-center border-black ">
+    <div class="bg-brand-light-cream rounded-2xl px-4 py-5">
+    <h1 class="text-6xl md:text-8xl font-display text-white drop-shadow-lg">
+      Christmas Cookies Made With Joy
+    </h1>
+    <p class="text-lg md:text-2xl text-accent-gold mt-4 mb-8">
+      Fresh baked. Hand decorated. Holiday magic in every bite.
+    </p>
+    <a href="#decorated-cookies" 
+       class="px-8 py-4 bg-xmas-red text-white rounded-full text-xl shadow-lg hover:bg-red-700 transition-transform transform hover:scale-105">
+      Order Now
+    </a>
+    </div>
   </div>
 </section>
 
-<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-  <section class="text-center">
-    <h2 class="text-2xl md:text-3xl font-semibold">Order your nut free treats today!</h2>
-    <div class="mt-6 flex justify-center">
-      <img src="be_allergy_safe_pumpkin.avif" alt="Nut free treats" class="w-auto object-cover rounded-lg shadow-sm" />
-    </div>
-  </section>
+<!-- Intro message -->
+<section class="max-w-4xl mx-auto text-center py-16 px-4">
+  <h2 class="text-4xl md:text-6xl font-extrabold text-xmas-green mb-6">
+    ’Tis The Season For Cookies
+  </h2>
+  <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+    Celebrate the holidays with flavors that spark nostalgia and
+    decorated cookies crafted to make spirits bright.
+  </p>
+</section>
 
-  <section class="mt-12 text-2xl">
-    <h3 class="text-6xl font-bold mb-6 text-center" style="font-family: 'Creepster', cursive; color:#D9480F;">
-      fall treat ideas
-    </h3>
-     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Featured Christmas Cookies -->
+<section id="decorated-cookies" class="container mx-auto px-6 py-16">
+  <h2 class="text-center text-5xl font-extrabold text-xmas-red mb-10 tracking-tight">
+    The Stars of the Season ✨
+  </h2>
 
-      <!-- CUPCAKES - Link to # (No specific link provided) -->
-      <a href="pricing.html#cupcakes" class="block h-full bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg flex flex-col transition duration-300 transform hover:scale-[1.03] hover:shadow-2xl hover:border-orange-400 focus:outline-none focus:ring-4 focus:ring-orange-300">
-        <div class="h-40 bg-gray-100">
-          <img 
-            src="jack-o-lantern-cupcakes.webp" 
-            alt="Pumpkin Cupcakes" 
-            class="object-cover w-full h-full" 
-          />
-        </div>
-        <div class="p-4 mt-auto">
-          <h4 class="text-2xl font-bold mb-1" style="font-family: 'Creepster', cursive; color:#F97316;">
-            Cupcakes
-          </h4>
-          <p class="font-extrabold mt-2 text-lg text-purple-700">Starting @ $35 a dozen</p>
-        </div>
-      </a>
+  <!-- Card Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-      <!-- COOKIES - Link to decorated-cookies.html -->
-      <a href="decorated-cookies.html" class="block h-full bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg flex flex-col transition duration-300 transform hover:scale-[1.03] hover:shadow-2xl hover:border-orange-400 focus:outline-none focus:ring-4 focus:ring-orange-300">
-        <div class="h-40 bg-gray-100">
-          <img 
-            src="gengerbreak_skelotons.jpeg" 
-            alt="Skeloton Cookie" 
-            class="object-cover w-full h-full"
-          />
-        </div>
-        <div class="p-4 mt-auto">
-          <h4 class="text-2xl font-bold mb-1" style="font-family: 'Creepster', cursive; color:#F97316;">
-            Cookies
-          </h4>
-          <p class="font-extrabold mt-2 text-lg text-purple-700">Starting @ $34 a dozen</p>
-        </div>
-      </a>
+    <!-- Traditional Cookies Card -->
+    <a href="traditional-cookies.html#traditional_cookies" class="bg-white rounded-3xl shadow-lg p-6 border border-gray-200 hover:scale-[1.03] transform transition">
+      <img src="christmas_images/christmas_cookie_giant_chocolate_chip.avif"
+           alt="Traditional cookies"
+           class="rounded-2xl w-full h-64 object-cover mb-6">
 
-      <!-- DONUTS - Link to donuts.html -->
-      <a href="donuts.html" class="block h-full bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg flex flex-col transition duration-300 transform hover:scale-[1.03] hover:shadow-2xl hover:border-orange-400 focus:outline-none focus:ring-4 focus:ring-orange-300">
-        <div class="h-40 bg-gray-100">
-          <img 
-            src="halloween_donuts.avif" 
-            alt="Halloween Donuts" 
-            class="object-cover w-full h-full"
-          />
-        </div>
-        <div class="p-4 mt-auto">
-          <h4 class="text-2xl font-bold mb-1" style="font-family: 'Creepster', cursive; color:#F97316;">
-            Donuts
-          </h4>
-          <p class="font-extrabold mt-2 text-lg text-purple-700">Starting @ $30 a dozen</p>
-        </div>
-      </a>
+      <h3 class="text-2xl font-bold text-xmas-red mb-3">Traditional Cookies</h3>
+      <p class="text-gray-700 text-lg mb-4">
+        All your favorite flavors plus our holiday classics!
+      </p>
+      <ul class="text-base text-gray-600 space-y-1 mb-4">
+        <li>Mint Chip</li>
+        <li>White Chocolate Peppermint</li>
+        <li>Gingerbread Crinkle</li>
+      </ul>
 
-      <!-- PIES - Link to pies.html -->
-      <a href="pies.html" class="block h-full bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg flex flex-col transition duration-300 transform hover:scale-[1.03] hover:shadow-2xl hover:border-orange-400 focus:outline-none focus:ring-4 focus:ring-orange-300">
-        <div class="h-40 bg-gray-100">
-          <img 
-            src="pretzel_pie.avif" 
-            alt="Pretzel Pie" 
-            class="object-cover w-full h-full" 
-          />
-        </div>
-        <div class="p-4 mt-auto">
-          <h4 class="text-2xl font-bold mb-1" style="font-family: 'Creepster', cursive; color:#F97316;">
-            Pies
-          </h4>
-          <p class="font-extrabold mt-2 text-lg text-purple-700">Starting @ $27</p>
-        </div>
-      </a>
+      <p class="font-chunky mt-4 text-xl font-medium text-gray-700">$27 per dozen</p>
+    </a>
 
-      <!-- CAKE - Link to flavors.html -->
-      <a href="flavors.html" class="block h-full bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg flex flex-col transition duration-300 transform hover:scale-[1.03] hover:shadow-2xl hover:border-orange-400 focus:outline-none focus:ring-4 focus:ring-orange-300">
-        <div class="h-40 bg-gray-100">
-          <img 
-            src="carmal_cake.avif" 
-            alt="White carmel cake" 
-            class="object-cover w-full h-full" 
-          />
-        </div>
-        <div class="p-4 mt-auto">
-          <h4 class="text-2xl font-bold mb-1" style="font-family: 'Creepster', cursive; color:#F97316;">
-            Cake
-          </h4>
-          <p class="font-extrabold mt-2 text-lg text-purple-700">Starting at $35</p>
-        </div>
-      </a>
+    <!-- Decorated Cookies Card (highlighted / center) -->
+    <a href="decorated-cookies.html#custom_cookies" class=" bg-white rounded-3xl shadow-xl p-6 border border-gray-200  hover:scale-[1.03] transform transition">
+      <img src="christmas_images/christmas_cookie_snowman.avif"
+           alt="Decorated cookies"
+           class="rounded-2xl w-full h-64 object-cover mb-6">
 
-      <!-- MACARONS - Link to macarons.html -->
-      <a href="macarons.html" class="block h-full bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg flex flex-col transition duration-300 transform hover:scale-[1.03] hover:shadow-2xl hover:border-orange-400 focus:outline-none focus:ring-4 focus:ring-orange-300">
-        <div class="h-40 bg-gray-100">
-          <img 
-            src="halloween_macaroons.avif" 
-            alt="Halloween Macarons" 
-            class="object-cover w-full h-full" 
-          />
-        </div>
-        <div class="p-4 mt-auto">
-          <h4 class="text-2xl font-bold mb-1" style="font-family: 'Creepster', cursive; color:#F97316;">
-            Macarons
-          </h4>
-          <p class="font-extrabold mt-2 text-lg text-purple-700">Starting @ $40 a dozen</p>
-        </div>
-      </a>
+      <h3 class="text-3xl font-bold text-xmas-green mb-2">Decorated Cookies</h3>
+      <p class="text-gray-700 text-lg mb-4">
+        Custom designs and joyful shapes for every celebration.
+      </p>
 
-    </div>
-  </section>
-</main>
+      <ul class="text-base text-gray-600 space-y-1">
+        <li>Gingerbread</li>
+        <li>Warm Cinnamon</li>
+        <li>Pumpkin Spice</li>
+      </ul>
+
+      <p class="font-chunky  mt-4 text-xl font-medium text-gray-700">$32 per dozen</p>
+      
+    </a>
+
+    <!-- Biscotti Card -->
+    <a href="traditional-cookies.html#biscotti" class="bg-white rounded-3xl shadow-lg p-6 border border-gray-200 hover:scale-105 transform transition">
+      <img src="christmas_images/christmas_biscotti_cranberry.avif"
+           alt="Biscotti"
+           class="rounded-2xl w-full h-64 object-cover mb-6">
+
+      <h3 class="text-2xl font-bold text-accent-brown mb-3">Festive Biscotti</h3>
+      <p class="text-gray-700 text-lg mb-4">
+        Made to be enjoyed with your hot beverage of choice.
+      </p>
+      <ul class="text-base text-gray-600 space-y-1 mb-4">
+        <li>Cranberry Orange</li>
+        <li>Pumpkin Spice</li>
+        <li>Chocolate Cardamom</li>
+      </ul>
+    </ul>
+
+    <p class="font-chunky mt-4 text-xl font-medium text-gray-700">$27 per dozen</p>
+    </a>
+</section>
+
     
 
 <footer class="bg-brand-light-cream text-brand-dark-brown border-t">
