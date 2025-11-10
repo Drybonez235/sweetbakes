@@ -1,57 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    <!-- All URLs updated to the correct domain: https://www.sweetbakeschicago.com/ -->
-
-    <!-- Homepage - Highest Priority -->
     <url>
         <loc>https://www.sweetbakeschicago.com/index.html</loc>
         <priority>1.0</priority>
+        <lastmod>2025-11-01</lastmod>
     </url>
-
-    <!-- Main Product/Category Pages (High Priority) -->
     <url>
         <loc>https://www.sweetbakeschicago.com/macarons.html</loc>
         <priority>0.8</priority>
+        <lastmod>2025-11-01</lastmod>
     </url>
     <url>
         <loc>https://www.sweetbakeschicago.com/pies.html</loc>
         <priority>0.8</priority>
+        <lastmod>2025-11-01</lastmod>
     </url>
     <url>
         <loc>https://www.sweetbakeschicago.com/donuts.html</loc>
         <priority>0.8</priority>
+        <lastmod>2025-11-01</lastmod>
     </url>
     <url>
         <loc>https://www.sweetbakeschicago.com/decorated-cookies.html</loc>
         <priority>0.8</priority>
+        <lastmod>2025-11-03</lastmod>
     </url>
     <url>
         <loc>https://www.sweetbakeschicago.com/traditional-cookies.html</loc>
         <priority>0.8</priority>
+        <lastmod>2025-11-03</lastmod>
     </url>
-
-    <!-- Utility & Gallery Pages (Medium-High Priority) -->
     <url>
         <loc>https://www.sweetbakeschicago.com/flavors.html</loc>
         <priority>0.7</priority>
+        <lastmod>2025-11-03</lastmod>
     </url>
     <url>
         <loc>https://www.sweetbakeschicago.com/gallery.html</loc>
         <priority>0.7</priority>
+        <lastmod>2025-11-03</lastmod>
     </url>
     <url>
         <loc>https://www.sweetbakeschicago.com/pricing.html</loc>
         <priority>0.7</priority>
+        <lastmod>2025-11-03</lastmod>
     </url>
-
-    <!-- Static Information Pages (Medium Priority) -->
     <url>
         <loc>https://www.sweetbakeschicago.com/about-us.html</loc>
         <priority>0.6</priority>
+        <lastmod>2025-11-03</lastmod>
     </url>
     <url>
         <loc>https://www.sweetbakeschicago.com/contact.html</loc>
         <priority>0.6</priority>
+        <lastmod>2025-11-03</lastmod>
     </url>
 </urlset>
